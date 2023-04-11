@@ -21,19 +21,19 @@ const Header = () => {
         <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='hidden md:flex flex-col text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-y-2 font-bold h-full'>
 
           <a href="#home">
-            home
+            Home
           </a>
 
           <a href="#about" className='opacity-40'>
-            about
+            About
           </a>
 
           <a href="#features" className='opacity-40'>
-            features
+            Features
           </a>
 
           <a href="#diagnose" className='opacity-40'>
-            diagnose
+            Diagnose
           </a>
 
         </motion.div>
