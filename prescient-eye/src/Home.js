@@ -27,7 +27,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='w-full h-screen flex items-center space-x-6 p-6 font-serif'>
+        <div className='w-full h-screen flex items-center space-x-6 py-6 px-[5%] font-sans'>
 
             <div className='w-1/2 h-fit flex flex-col items-center space-y-2'>
                 <div className='rounded-2xl overflow-hidden'>
@@ -40,7 +40,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='flex items-center justify-center w-1/2 h-[75%] space border-2 border-black dark:border-white rounded-2xl p-4'>
+            <div className='flex items-center justify-center w-1/2 h-[75%] rounded-2xl p-4'>
 
                 <motion.img initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -50,18 +50,18 @@ const Home = () => {
                     className='h-80 w-80 object-cover'
                 />
 
-                <div className='dark:bg-gray-600 bg-gray-400 p-4 max-w-[60%] h-[55%] flex flex-col justify-center shadow-2xl'>
-                    <div className='flex flex-col border-b-2 py-4'>
+                <div className='dark:bg-[#f1f3f2] dark:text-[#141414] bg-gray-400 p-4 max-w-[60%] h-[65%] flex flex-col justify-center shadow-2xl'>
+                    <div className='flex flex-col border-b border-[#141414] py-4'>
                         <h1 className='text-2xl font-bold tracking-widest'>Hasna Aït Boulahcen</h1>
-                        <p>Age: 26</p>
+                        <p className='text-base'>Age: 26</p>
                     </div>
-                    <div className='flex flex-col border-b-2 py-4'>
+                    <div className='flex flex-col border-b border-[#141414] py-4'>
                         <h1 className='text-lg font-bold tracking-widest'>NATIONALITY</h1>
-                        <p className=''>French</p>
+                        <p className='text-base'>French</p>
                     </div>
-                    <div className='flex flex-col border-b-2 py-4'>
+                    <div className='flex flex-col border-b border-[#141414] py-4'>
                         <h1 className='text-lg font-bold tracking-widest'>HISTORY</h1>
-                        <p className='text-justify'>Hasna Aït Boulahcen was a French-Moroccan woman who was born on January 1, 1989, in Clichy-la-Garenne, a suburb of Paris, France. She was known for her involvement in the November 2015 Paris attacks, which claimed the lives of 130 people.</p>
+                        <p className='text-justify text-lg'>Hasna Aït Boulahcen was a French-Moroccan woman who was born on January 1, 1989, in Clichy-la-Garenne, a suburb of Paris, France. She was known for her involvement in the November 2015 Paris attacks, which claimed the lives of 130 people.</p>
                     </div>
                     <div className='text-lg flex flex-col py-4'>
                         <h1 className='font-bold tracking-widest'>ORGANIZATION</h1>

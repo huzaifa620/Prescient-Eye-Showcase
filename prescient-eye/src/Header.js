@@ -15,7 +15,7 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <header className='sticky top-0 p-5 mt-2 flex flex-col items-center md:items-start justify-between w-full lg:w-[85%] mx-auto z-20 h-fit font-sans'>
+    <header className='sticky top-0 p-5 mt-2 flex flex-col items-center md:items-start justify-between w-full px-[4%] mx-auto z-20 h-fit font-sans'>
 
       <div className='w-full flex items-center justify-between'>
         <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='hidden md:flex flex-col text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-y-2 font-bold h-full'>
