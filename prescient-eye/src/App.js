@@ -2,7 +2,7 @@ import Header from './Header'
 
 function App() {
   return (
-    <div className="bg-[#f1f3f2] dark:bg-[#141414] dark:text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700 text-sm">
+    <div className="bg-[#f1f3f2] bg-gradient-to-b dark:from-[#141414] dark:to-[#282828] dark:text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-teal-700 text-sm">
 
       <Header />
 
