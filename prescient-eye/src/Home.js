@@ -23,12 +23,12 @@ const Home = () => {
         const handleTimeUpdate = () => {
             if (video.currentTime >= 5) {
                 setShowImage(true)
-                setName('Hasna Aït Boulahcen')
-                setAge('26')
-                setNationality('French')
-                setHistory('Hasna Aït Boulahcen was a French-Moroccan woman who was born on January 1, 1989, in Clichy-la-Garenne, a suburb of Paris, France. She was known for her involvement in the November 2015 Paris attacks, which claimed the lives of 130 people.')
-                setOrg('ISIS (Daesh)')
-                setImg('https://i.guim.co.uk/img/media/9aacc4e4d293add824ee516e5bde4e80256d070e/836_0_3103_1863/master/3103.jpg?width=620&quality=85&dpr=1&s=none')
+                setName('Shari baloch')
+                setAge('30')
+                setNationality('Pakistani')
+                setOrg('Balochistan Liberation Army')
+                setHistory("The bomber was identified as Shari Baloch, a 30-year-old female and secondary school science teacher from Kech District in Balochistan. She held bachelor's and master's degrees in education from the Allama Iqbal Open University, and had also obtained a master's degree in zoology from the University of Balochistan.")
+                setImg('https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org')
             };
 
         };
@@ -45,7 +45,7 @@ const Home = () => {
 
             <div className='w-full md:w-1/2 h-fit flex flex-col items-center space-y-2'>
                 <div className='rounded-2xl overflow-hidden'>
-                    <video ref={videoRef} controls muted>
+                    <video ref={videoRef} autoPlay muted>
                     <source src={video} type="video/mp4" />
                     </video>
                 </div>
@@ -54,7 +54,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 h-[75%] rounded-2xl p-4 space-y-4'>
+            <div className='flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 h-fit rounded-2xl p-4 space-y-4'>
                 
                 { name ? 
                     <motion.img initial={{ opacity: 0 }}
