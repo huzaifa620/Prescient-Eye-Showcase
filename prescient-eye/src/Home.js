@@ -41,9 +41,9 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='w-full h-screen flex items-center space-x-6 py-6 px-[5%] font-sans'>
+        <div className='w-full h-fit md:h-screen flex flex-col md:flex-row items-center md:space-x-6 py-6 px-[2%] md:px-[5%] font-sans'>
 
-            <div className='w-1/2 h-fit flex flex-col items-center space-y-2'>
+            <div className='w-full md:w-1/2 h-fit flex flex-col items-center space-y-2'>
                 <div className='rounded-2xl overflow-hidden'>
                     <video ref={videoRef} controls muted>
                     <source src={video} type="video/mp4" />
@@ -54,7 +54,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='flex items-center justify-center w-1/2 h-[75%] rounded-2xl p-4'>
+            <div className='flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 h-[75%] rounded-2xl p-4 space-y-4'>
                 
                 { name ? 
                     <motion.img initial={{ opacity: 0 }}
@@ -62,13 +62,13 @@ const Home = () => {
                         transition={{ ease: 'linear', duration: 3 }}
                         src={img}
                         alt=''
-                        className='h-80 w-80 object-cover rounded-3xl'
+                        className='h-44 md:h-80 w-full md:w-80 object-contain rounded-3xl md:rounded-l-3xl'
                     /> 
                     :
-                    <img src={img} alt='' className='h-80 w-80 object-cover rounded-l-3xl' />
+                    <img src={img} alt='' className='h-44 md:h-80 w-full md:w-80 object-contain rounded-3xl md:rounded-l-3xl' />
                 }
 
-                <div className='bg-[#141414] dark:bg-[#f1f3f2] text-[#f1f3f2] dark:text-[#141414] p-4 max-w-[60%] min-w-[60%] h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
+                <div className='bg-[#141414] dark:bg-[#f1f3f2] text-[#f1f3f2] dark:text-[#141414] p-4 w-full md:max-w-[60%] md:min-w-[60%] h-fit md:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
                     <div className='flex flex-col border-b dark:border-[#141414] py-4'>
                         <h1 className='text-2xl font-bold tracking-widest'> {name ? <Typewriter text={name} delay={200} /> : "-" } </h1>
                         <p className='text-base'>Age: {age ? <Typewriter text={age} delay={500} /> : "-" }</p>
@@ -78,12 +78,12 @@ const Home = () => {
                         <p className='text-base'> { nationality ? <Typewriter text={nationality} delay={200} /> : "-" } </p>
                     </div>
                     <div className='flex flex-col border-b dark:border-[#141414] py-4'>
-                        <h1 className='text-lg font-bold tracking-widest'>HISTORY</h1>
-                        <p className='text-justify text-lg'> { history ? <Typewriter text={history} delay={50} /> : "-" } </p>
+                        <h1 className='text-lg font-bold tracking-widest'>ORGANIZATION</h1>
+                        <p className='text-sm'> {org ? <Typewriter text={org} delay={200} /> : "-" } </p>
                     </div>
                     <div className='text-lg flex flex-col py-4'>
-                        <h1 className='font-bold tracking-widest'>ORGANIZATION</h1>
-                        <p className='text-sm'> {org ? <Typewriter text={org} delay={200} /> : "-" } </p>
+                        <h1 className='text-lg font-bold tracking-widest'>HISTORY</h1>
+                        <p className='text-justify text-lg'> { history ? <Typewriter text={history} delay={50} /> : "-" } </p>
                     </div>
                 </div>
 

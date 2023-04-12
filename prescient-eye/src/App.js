@@ -8,9 +8,9 @@ function App() {
 
       <Header />
 
-      <section id='home' className='snap-center'>
-        <div className="relative bg-cover bg-center h-screen">
-          <div className="absolute inset-0 mt-[11%] flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
+      <section id='home' className='md:snap-center'>
+        <div className="relative bg-cover bg-center">
+          <div className="absolute inset-0 mt-[11%] hidden md:flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
             {/* <img className='rounded-full h-32 w-32' src={logo} alt=''/> */}
             Prescient Eye
           </div>
@@ -20,19 +20,19 @@ function App() {
         </div>
       </section>
 
-      <section id='features' className='snap-center'>
+      <section id='features' className='md:snap-center'>
         FEATURES
       </section>
 
-      <section id='diagnose' className='snap-center'>
+      <section id='diagnose' className='md:snap-center'>
         DIAGNOSE
       </section>
 
-      <section id='about' className='snap-center'>
+      <section id='about' className='md:snap-center'>
         ABOUT
       </section>
 
-      <section id='contactUs' className='snap-start'>
+      <section id='contactUs' className='md:snap-start'>
         Contact Us
       </section>
 
