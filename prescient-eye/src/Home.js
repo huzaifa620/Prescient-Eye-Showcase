@@ -62,13 +62,13 @@ const Home = () => {
                         transition={{ ease: 'linear', duration: 3 }}
                         src={img}
                         alt=''
-                        className='h-80 w-80 object-cover'
+                        className='h-80 w-80 object-cover rounded-3xl'
                     /> 
                     :
-                    <img src={img} alt='' className='h-80 w-80 object-cover'/>
+                    <img src={img} alt='' className='h-80 w-80 object-cover rounded-l-3xl' />
                 }
 
-                <div className='bg-[#141414] dark:bg-[#f1f3f2] text-[#f1f3f2] dark:text-[#141414] p-4 max-w-[60%] min-w-[60%] h-[65%] flex flex-col justify-center shadow-2xl'>
+                <div className='bg-[#141414] dark:bg-[#f1f3f2] text-[#f1f3f2] dark:text-[#141414] p-4 max-w-[60%] min-w-[60%] h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
                     <div className='flex flex-col border-b dark:border-[#141414] py-4'>
                         <h1 className='text-2xl font-bold tracking-widest'> {name ? <Typewriter text={name} delay={200} /> : "-" } </h1>
                         <p className='text-base'>Age: {age ? <Typewriter text={age} delay={500} /> : "-" }</p>

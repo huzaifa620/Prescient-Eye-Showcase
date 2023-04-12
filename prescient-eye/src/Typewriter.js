@@ -11,7 +11,7 @@ const Typewriter = ({ text, delay }) => {
     }, delay);
 
     return () => clearInterval(interval);
-  }, [index, text]);
+  }, [index, text, delay]);
 
   return <span>{displayText}</span>;
 };

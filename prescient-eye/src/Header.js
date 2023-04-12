@@ -45,7 +45,7 @@ const Header = () => {
 
         <motion.div initial={{ x: 500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row-reverse md:flex-row items-center text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-x-4 h-full'>
 
-          <a href="#contactUs" className='hidden md:flex space-x-1 items-center bg-transparent px-3 py-1 rounded-3xl border border-[#141414] dark:border-[#f1f3f2]'>
+          <a href="#contactUs" className='hidden md:flex space-x-1 mt-[10%] items-center bg-transparent px-3 py-1 rounded-3xl border border-[#141414] dark:border-[#f1f3f2]'>
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="black" className="w-4 h-4">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
@@ -61,7 +61,7 @@ const Header = () => {
             <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" /> </svg> 
           )}
 
-          {isDark ? <SunIcon onClick={toggleDark} className='h-6' /> : <MoonIcon onClick={toggleDark} className='h-6' />}
+          {isDark ? <SunIcon onClick={toggleDark} className='h-6 mt-[10%]' /> : <MoonIcon onClick={toggleDark} className='h-6 mt-[10%]' />}
 
         </motion.div>
 
