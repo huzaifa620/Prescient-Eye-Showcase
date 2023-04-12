@@ -21,19 +21,19 @@ const Header = () => {
       <div className='w-full flex items-center md:items-start justify-between'>
         <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='hidden md:flex flex-col text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-y-2 font-bold h-full'>
 
-          <a href="#home" onClick={() => setSection([1,0,0,0])} className={section[0] == 1 ? "opacity-100" : "opacity-40"}>
+          <a href="#home" onClick={() => setSection([1,0,0,0])} className={section[0] === 1 ? "opacity-100" : "opacity-40"}>
             Home
           </a>
 
-          <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] == 1 ? "opacity-100" : "opacity-40"}>
+          <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] === 1 ? "opacity-100" : "opacity-40"}>
             About
           </a>
 
-          <a href="#features" onClick={() => setSection([0,0,1,0])} className={section[2] == 1 ? "opacity-100" : "opacity-40"}>
+          <a href="#features" onClick={() => setSection([0,0,1,0])} className={section[2] === 1 ? "opacity-100" : "opacity-40"}>
             Features
           </a>
 
-          <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] == 1 ? "opacity-100" : "opacity-40"}>
+          <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] === 1 ? "opacity-100" : "opacity-40"}>
             Diagnose
           </a>
 
@@ -70,19 +70,19 @@ const Header = () => {
       {openMenu && (
 
         <div className="w-full h-fit bg-[#141414] dark:bg-[#f1f3f2] md:hidden items-center flex flex-col space-y-2 font-medium p-4 text-[#f1f3f2] dark:text-[#141414] absolute mt-[20%]">
-          <a onClick={() => setSection([1,0,0,0])} className={section[0] == 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"} href="#home">
+          <a onClick={() => setSection([1,0,0,0])} className={section[0] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"} href="#home">
             Home
           </a>
 
-          <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] == 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
+          <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
             About
           </a>
 
-          <a href="#features" onClick={() => setSection([0,0,1,0])} className={section[2] == 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
+          <a href="#features" onClick={() => setSection([0,0,1,0])} className={section[2] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
             Features
           </a>
 
-          <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] == 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
+          <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
             Diagnose
           </a>
         </div>
