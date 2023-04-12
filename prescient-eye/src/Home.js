@@ -62,10 +62,10 @@ const Home = () => {
                         transition={{ ease: 'linear', duration: 3 }}
                         src={img}
                         alt=''
-                        className='h-44 md:h-80 w-full md:w-80 object-contain rounded-3xl md:rounded-l-3xl'
+                        className='h-44 md:h-80 w-full md:w-80 object-contain md:object-cover rounded-3xl md:rounded-none md:rounded-l-3xl'
                     /> 
                     :
-                    <img src={img} alt='' className='h-44 md:h-80 w-full md:w-80 object-contain rounded-3xl md:rounded-l-3xl' />
+                    <img src={img} alt='' className='h-44 md:h-80 w-full md:w-80 object-contain md:object-cover rounded-3xl md:rounded-none md:rounded-l-3xl' />
                 }
 
                 <div className='bg-[#141414] dark:bg-[#f1f3f2] text-[#f1f3f2] dark:text-[#141414] p-4 w-full md:max-w-[60%] md:min-w-[60%] h-fit md:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
