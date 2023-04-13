@@ -8,10 +8,10 @@ function App() {
 
       <Header />
 
-      <section id='home' className='md:snap-end'>
+      <section id='home' className=''>
         <div className="relative bg-cover bg-center">
           <div className="absolute inset-0 mt-[11%] hidden md:flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
-            <img className='rounded-full' src={logo} alt=''/>
+            <img className='rounded-full' src={logo} alt='' />
             {/* Prescient Eye */}
           </div>
           <div className="relative z-10">
@@ -20,19 +20,19 @@ function App() {
         </div>
       </section>
 
-      <section id='features' className='md:snap-center'>
+      <section id='features' className=''>
         FEATURES
       </section>
 
-      <section id='diagnose' className='md:snap-center'>
+      <section id='diagnose' className=''>
         DIAGNOSE
       </section>
 
-      <section id='about' className='md:snap-center'>
+      <section id='about' className=''>
         ABOUT
       </section>
 
-      <section id='contactUs' className='md:snap-start'>
+      <section id='contactUs' className=''>
         Contact Us
       </section>
 

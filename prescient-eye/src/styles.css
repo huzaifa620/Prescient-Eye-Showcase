@@ -39,9 +39,33 @@ body {
   }
   
   li {
-    flex: 0 0 250px;
+    flex: 0 0 400px;
     background: var(--accent);
     margin: 0 20px 0 0;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    li {
+      flex: 0 0 400px;
+      background: var(--accent);
+      margin: 0 20px 0 0;
+    } 
+  }
+
+  @media (min-width: 480px) {
+    li {
+      flex: 0 0 300px;
+      background: var(--accent);
+      margin: 0 20px 0 0;
+    } 
+  }
+
+  @media (max-width: 480px) {
+    li {
+      flex: 0 0 200px;
+      background: var(--accent);
+      margin: 0 20px 0 0;
+    } 
   }
   
   li:last-of-type {

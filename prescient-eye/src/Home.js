@@ -55,9 +55,9 @@ const Home = () => {
 
     return (
         <div className='flex flex-col'>
-            <div className='w-full h-fit mt-10 lg:mt-24 flex flex-col md:flex-row items-center md:space-x-6 py-6 px-[2%] md:px-[5%] font-sans'>
+            <div className='w-full h-fit mt-10 lg:mt-24 flex flex-col xl:flex-row items-center xl:space-x-6 py-6 px-[2%] xl:px-[5%] font-sans'>
 
-                <div className='w-full md:w-1/2 h-fit flex flex-col items-center space-y-2'>
+                <div className='w-full xl:w-1/2 h-fit flex flex-col items-center space-y-2'>
                     <div className='rounded-2xl overflow-hidden'>
                         <video ref={videoRef} autoPlay muted key={vidSrc}>
                             <source src={vidSrc} type="video/mp4" />
@@ -68,7 +68,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col md:flex-row items-center justify-center w-full md:w-1/2 h-fit rounded-2xl p-4 space-y-4'>
+                <div className='flex flex-col xl:flex-row items-center justify-center w-full xl:w-1/2 h-fit rounded-2xl p-4 space-y-4'>
                     
                     { name ? 
                         <motion.img initial={{ opacity: 0 }}
@@ -76,13 +76,13 @@ const Home = () => {
                             transition={{ ease: 'linear', duration: 3 }}
                             src={img}
                             alt=''
-                            className='h-44 md:h-80 w-full md:w-80 object-contain md:object-cover rounded-3xl md:rounded-none md:rounded-l-3xl'
+                            className='h-44 md:h-80 w-full md:w-80 object-contain md:object-cover rounded-3xl xl:rounded-none xl:rounded-l-3xl'
                         /> 
                         :
-                        <img src={img} alt='' className='h-44 md:h-80 w-full md:w-80 object-contain md:object-cover rounded-3xl md:rounded-none md:rounded-l-3xl' />
+                        <img src={img} alt='' className='h-44 md:h-80 w-full md:w-80 object-contain md:object-cover rounded-3xl xl:rounded-none xl:rounded-l-3xl' />
                     }
 
-                    <div className='bg-[#141414] dark:bg-[#f1f3f2] text-[#f1f3f2] dark:text-[#141414] p-4 w-full md:max-w-[60%] md:min-w-[60%] h-fit md:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
+                    <div className='bg-[#141414] dark:bg-[#f1f3f2] text-[#f1f3f2] dark:text-[#141414] p-4 w-full xl:max-w-[60%] xl:min-w-[60%] h-fit xl:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
                         <div className='flex flex-col border-b dark:border-[#141414] py-4'>
                             <h1 className='text-2xl font-bold tracking-widest'> {name ? <Typewriter text={name} delay={200} /> : "-" } </h1>
                             <p className='text-base'>Age: {age ? <Typewriter text={age} delay={500} /> : "-" }</p>
@@ -108,7 +108,7 @@ const Home = () => {
             <div className="flex w-full flex-col lg:flex-row items-center justify-center">
 
                 <div className="w-full lg:w-[30%] text-black dark:text-white font-semibold text-lg flex py-[5%] items-center justify-center">
-                    <p className='text-2xl font-bold text-center'>24/7 Live video feed from different angles</p>
+                    <p className='text-4xl font-bold text-center'>24/7 Live video feed from different angles</p>
                 </div>
 
                 <div className="flex flex-col lg:flex-row items-start justify-center w-full lg:w-[60%]">
