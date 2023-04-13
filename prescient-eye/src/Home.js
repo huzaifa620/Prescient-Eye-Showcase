@@ -55,7 +55,7 @@ const Home = () => {
 
     return (
         <div className='flex flex-col'>
-            <div className='w-full h-fit mt-10 lg:mt-24 flex flex-col xl:flex-row items-center xl:space-x-6 py-6 px-[2%] xl:px-[5%] font-sans'>
+            <div className='w-full h-fit mt-10 flex flex-col xl:flex-row items-center xl:space-x-6 py-6 px-[2%] xl:px-[5%] font-sans'>
 
                 <div className='w-full xl:w-1/2 h-fit flex flex-col items-center space-y-2'>
                     <div className='rounded-2xl overflow-hidden'>
