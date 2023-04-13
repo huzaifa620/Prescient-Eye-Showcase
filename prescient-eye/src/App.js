@@ -8,7 +8,7 @@ function App() {
 
       <Header />
 
-      <section id='home' className='md:snap-center'>
+      <section id='home' className='md:snap-end'>
         <div className="relative bg-cover bg-center">
           <div className="absolute inset-0 mt-[11%] hidden md:flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
             <img className='rounded-full' src={logo} alt=''/>

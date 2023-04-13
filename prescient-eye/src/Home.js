@@ -4,7 +4,10 @@ import blast from './blast.mp4'
 import Typewriter from './Typewriter';
 import "./styles.css";
 import { motion, useScroll } from "framer-motion";
-import logo4 from './logo4.png'
+import img1 from './img1.png'
+import img2 from './img2.png'
+import img3 from './img3.png'
+import img4 from './img4.png'
 
 const Home = () => {
 
@@ -52,7 +55,7 @@ const Home = () => {
 
     return (
         <div className='flex flex-col'>
-            <div className='w-full h-fit mt-10 flex flex-col md:flex-row items-center md:space-x-6 py-6 px-[2%] md:px-[5%] font-sans'>
+            <div className='w-full h-fit mt-10 lg:mt-24 flex flex-col md:flex-row items-center md:space-x-6 py-6 px-[2%] md:px-[5%] font-sans'>
 
                 <div className='w-full md:w-1/2 h-fit flex flex-col items-center space-y-2'>
                     <div className='rounded-2xl overflow-hidden'>
@@ -104,11 +107,11 @@ const Home = () => {
             
             <div className="flex w-full items-center justify-center">
 
-                <div className="w-[30%] bg-[#f2f1f3] dark:bg-[#1a1a1a] text-black dark:text-white font-semibold text-lg flex py-[5%] items-center justify-center">
+                <div className="w-[30%] text-black dark:text-white font-semibold text-lg flex py-[5%] items-center justify-center">
                     <p className='text-2xl font-bold'>24/7 Live video feed from different angles</p>
                 </div>
 
-                <div className="flex items-start justify-center w-[50%]">
+                <div className="flex items-start justify-center w-[60%]">
                     <svg id="progress" className="dark:stroke-white stroke-black" width="100" height="100" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="30" pathLength="1" className="opacity-30 dark:stroke-white stroke-black" />
                         <motion.circle
@@ -120,24 +123,21 @@ const Home = () => {
                             style={{ pathLength: scrollXProgress }}
                         />
                     </svg>
-                    <ul ref={ref} className='scrollbar-thin dark:scrollbar-track-teal-800/30 scrollbar-track-[#fff3] dark:scrollbar-thumb-[#141414] scrollbar-thumb-[#f1f3f2]'>
+                    <ul ref={ref} className='scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
                         <li className='rounded-3xl'>
-                            <img src={logo4} alt='' className="w-full h-full object-cover rounded-2xl" onClick={() => {setVidSrc(video);}} />
+                            <img src={img1} alt='' className="w-full h-full object-cover rounded-2xl" onClick={() => {setVidSrc(video);}} />
                         </li>
                         <li className='rounded-3xl'>
-                            <img onClick={() => {setVidSrc(blast);}} src={logo4} alt='' className="w-full h-full object-cover rounded-2xl" />
+                            <img onClick={() => {setVidSrc(blast);}} src={img2} alt='' className="w-full h-full object-cover rounded-2xl" />
                         </li>
                         <li className='rounded-3xl'>
-                            <img src={logo4} alt='' className="w-full h-full object-cover rounded-2xl" />
+                            <img src={img3} alt='' className="w-full h-full object-cover rounded-2xl" />
                         </li>
                         <li className='rounded-3xl'>
-                            <img src={logo4} alt='' className="w-full h-full object-cover rounded-2xl" />
+                            <img src={img4} alt='' className="w-full h-full object-cover rounded-2xl" />
                         </li>
                         <li className='rounded-3xl'>
-                            <img src={logo4} alt='' className="w-full h-full object-cover rounded-2xl" />
-                        </li>
-                        <li className='rounded-3xl'>
-                            <img src={logo4} alt='' className="w-full h-full object-cover rounded-2xl" />
+                            <img src={img1} alt='' className="w-full h-full object-cover rounded-2xl" />
                         </li>
                     </ul>
                 </div>

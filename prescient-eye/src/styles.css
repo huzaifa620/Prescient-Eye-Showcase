@@ -30,16 +30,16 @@ body {
   ul {
     display: flex;
     list-style: none;
-    width: 50%;
     height: 300px;
+    width: auto;
     overflow-x: scroll;
     padding: 20px 0;
-    flex: 0 0 600px;
+    flex: 0 0 1000px;
     margin: 0 20px;
   }
   
   li {
-    flex: 0 0 200px;
+    flex: 0 0 250px;
     background: var(--accent);
     margin: 0 20px 0 0;
   }
