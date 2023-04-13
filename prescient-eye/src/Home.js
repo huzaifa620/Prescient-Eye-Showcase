@@ -60,7 +60,7 @@ const Home = () => {
                             <source src={vidSrc} type="video/mp4" />
                         </video>
                     </div>
-                    <div className='text-lg font-semibold'>
+                    <div className='text-lg font-semibold text-black dark:text-white'>
                         Live video feed
                     </div>
                 </div>
@@ -105,7 +105,7 @@ const Home = () => {
             <div className="flex w-full items-center justify-center border rounded-3xl bg-[#1a1a1a] dark:bg-[#f2f1f3]">
 
                 <div className="w-[30%] bg-[#f2f1f3] dark:bg-[#1a1a1a] text-black dark:text-white font-semibold text-lg flex py-[5%] items-center justify-center">
-                    24/7 Live video feed from different angles
+                    <p>24/7 Live video feed from different angles</p>
                 </div>
 
                 <div className="flex items-start justify-center w-[50%]">
