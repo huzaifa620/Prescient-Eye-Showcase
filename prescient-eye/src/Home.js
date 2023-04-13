@@ -102,25 +102,25 @@ const Home = () => {
 
             </div>
             
-            <div className="flex w-full items-center justify-center border rounded-3xl">
+            <div className="flex w-full items-center justify-center border rounded-3xl bg-[#1a1a1a] dark:bg-[#f2f1f3]">
 
-                <div className="w-[30%] bg-[#f2f1f3] text-black flex x-[10%] items-center justify-center">
-                    HEKKIW
+                <div className="w-[30%] bg-[#f2f1f3] dark:bg-[#1a1a1a] text-black dark:text-white font-semibold text-lg flex py-[5%] items-center justify-center">
+                    24/7 Live video feed from different angles
                 </div>
 
                 <div className="flex items-start justify-center w-[50%]">
-                    <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
+                    <svg id="progress" className="stroke-white dark:stroke-black" width="100" height="100" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="30" pathLength="1" className="opacity-30 stroke-white dark:stroke-black" />
                         <motion.circle
-                        cx="50"
-                        cy="50"
-                        r="30"
-                        pathLength="1"
-                        className="indicator"
-                        style={{ pathLength: scrollXProgress }}
+                            cx="50"
+                            cy="50"
+                            r="30"
+                            pathLength="1"
+                            className="indicator"
+                            style={{ pathLength: scrollXProgress }}
                         />
                     </svg>
-                    <ul ref={ref}>
+                    <ul ref={ref} className='scrollbar-thin dark:scrollbar-track-teal-800/30 scrollbar-track-[#fff3] dark:scrollbar-thumb-[#141414] scrollbar-thumb-[#f1f3f2]'>
                         <li className='rounded-3xl'>
                             <img src={logo4} alt='' className="w-full h-full object-cover rounded-2xl" onClick={() => {setVidSrc(video);}} />
                         </li>

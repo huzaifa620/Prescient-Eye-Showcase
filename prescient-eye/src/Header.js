@@ -44,7 +44,7 @@ const Header = () => {
 
         <motion.div initial={{ y: -100, opacity: 0, scale: 0.5 }} animate={{ y: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row items-center space-x-4 h-full'>
           <img className='rounded-full h-16 w-16' src={logo} alt=''/>
-          <div className='text-lg font-bold'>Prescient Eye</div>
+          <div className='text-lg font-bold text-black dark:text-white'>Prescient Eye</div>
         </motion.div>
 
         <motion.div initial={{ x: 500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row-reverse md:flex-row items-center text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-x-4 h-full'>

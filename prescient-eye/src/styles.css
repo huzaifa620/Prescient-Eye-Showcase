@@ -19,22 +19,12 @@ body {
   
   #progress {
     transform: rotate(-90deg);
-    /* margin-left: 32.5%; */
   }
   
   circle {
     stroke-dashoffset: 0;
     stroke-width: 15%;
     fill: none;
-  }
-  
-  .bg {
-    stroke: var(--accent);
-    opacity: 0.3;
-  }
-  
-  #progress .indicator {
-    stroke: var(--accent);
   }
   
   ul {
@@ -48,7 +38,7 @@ body {
     margin: 0 20px;
   }
   
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     height: 5px;
     width: 5px;
     background: #fff3;
@@ -62,7 +52,7 @@ body {
   
   ::-webkit-scrollbar-corner {
     background: #fff3;
-  }
+  } */
   
   li {
     flex: 0 0 200px;
