@@ -34,7 +34,7 @@ body {
     width: auto;
     overflow-x: scroll;
     padding: 20px 0;
-    flex: 0 0 1000px;
+    flex: 0 0 80%;
     margin: 0 20px;
   }
   

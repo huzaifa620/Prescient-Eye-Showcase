@@ -105,13 +105,13 @@ const Home = () => {
 
             </div>
             
-            <div className="flex w-full items-center justify-center">
+            <div className="flex w-full flex-col lg:flex-row items-center justify-center">
 
-                <div className="w-[30%] text-black dark:text-white font-semibold text-lg flex py-[5%] items-center justify-center">
-                    <p className='text-2xl font-bold'>24/7 Live video feed from different angles</p>
+                <div className="w-full lg:w-[30%] text-black dark:text-white font-semibold text-lg flex py-[5%] items-center justify-center">
+                    <p className='text-2xl font-bold text-center'>24/7 Live video feed from different angles</p>
                 </div>
 
-                <div className="flex items-start justify-center w-[60%]">
+                <div className="flex flex-col lg:flex-row items-start justify-center w-full lg:w-[60%]">
                     <svg id="progress" className="dark:stroke-white stroke-black" width="100" height="100" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="30" pathLength="1" className="opacity-30 dark:stroke-white stroke-black" />
                         <motion.circle
