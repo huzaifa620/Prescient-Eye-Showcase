@@ -82,7 +82,7 @@ const Home = () => {
                         <img src={img} alt='' className='h-44 md:h-80 w-full md:w-80 object-contain md:object-cover rounded-3xl xl:rounded-none xl:rounded-l-3xl' />
                     }
 
-                    <div className='bg-[#141414] dark:bg-[#f1f3f2] text-[#f1f3f2] dark:text-[#141414] p-4 w-full xl:max-w-[60%] xl:min-w-[60%] h-fit xl:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
+                    <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full xl:max-w-[60%] xl:min-w-[60%] h-fit xl:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
                         <div className='flex flex-col border-b dark:border-[#141414] py-4'>
                             <h1 className='text-2xl font-bold tracking-widest'> {name ? <Typewriter text={name} delay={200} /> : "-" } </h1>
                             <p className='text-base'>Age: {age ? <Typewriter text={age} delay={500} /> : "-" }</p>
