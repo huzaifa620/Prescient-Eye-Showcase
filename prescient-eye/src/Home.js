@@ -1,20 +1,29 @@
 import React, {useState, useEffect, useRef} from 'react'
-import video from './vid.mp4'
-import blast from './blast.mp4'
 import Typewriter from './Typewriter';
 import "./styles.css";
 import { motion, useScroll } from "framer-motion";
+
+import vid1 from './vid.mp4'
+import vid2 from './blast.mp4'
+import vid3 from './vid.mp4'
+import vid4 from './blast.mp4'
+import vid5 from './vid.mp4'
 import img1 from './img1.png'
 import img2 from './img2.png'
 import img3 from './img3.png'
 import img4 from './img4.png'
+import img5 from './img1.png'
 
 const Home = () => {
 
     const [showImage, setShowImage] = useState(false);
-    const [vidSrc, setVidSrc] = useState(video)
+    const [vidSrc, setVidSrc] = useState([vid1, 1])
     const videoRef = useRef(null);
     const [currentTime, setCurrentTime] = useState(0);
+    const [section, setSection] = useState([1,0,0,0])
+
+    const [vids, setVids] = useState([vid1, vid2, vid3, vid4, vid5])
+    const [imgs, setImgs] = useState([img1, img2, img3, img4, img5])
 
     const ref = useRef(null);
     const { scrollXProgress } = useScroll({ container: ref });
@@ -30,7 +39,7 @@ const Home = () => {
         const video = videoRef.current;
 
         const handleTimeUpdate = () => {
-            if (video.currentTime >= 5) {
+            if (video.currentTime >= 3) {
                 setShowImage(true)
                 setName('Shari baloch')
                 setAge('30')
@@ -39,7 +48,6 @@ const Home = () => {
                 setHistory("The bomber was identified as Shari Baloch, a 30-year-old female and secondary school science teacher from Kech District in Balochistan. She held bachelor's and master's degrees in education from the Allama Iqbal Open University, and had also obtained a master's degree in zoology from the University of Balochistan.")
                 setImg('https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org')
             };
-
         };
 
         video.addEventListener('timeupdate', handleTimeUpdate);
@@ -49,22 +57,18 @@ const Home = () => {
         };
     }, []);
 
-    const handleClick = () => {
-        setVidSrc(blast);
-    };
-
     return (
         <div className='flex flex-col'>
             <div className='w-full h-fit mt-10 flex flex-col xl:flex-row items-center xl:space-x-6 py-6 px-[2%] xl:px-[5%] font-sans'>
 
                 <div className='w-full xl:w-1/2 h-fit flex flex-col items-center space-y-2'>
                     <div className='rounded-2xl overflow-hidden'>
-                        <video ref={videoRef} autoPlay muted key={vidSrc}>
-                            <source src={vidSrc} type="video/mp4" />
+                        <video ref={videoRef} autoPlay muted key={vidSrc[0]}>
+                            <source src={vidSrc[0]} type="video/mp4" />
                         </video>
                     </div>
                     <div className='text-lg font-semibold text-black dark:text-white'>
-                        Live video feed
+                        Live video feed of Camera {vidSrc[1]}
                     </div>
                 </div>
 
@@ -107,8 +111,31 @@ const Home = () => {
             
             <div className="flex w-full flex-col lg:flex-row items-center justify-center">
 
-                <div className="w-full lg:w-[30%] text-black dark:text-white font-semibold text-lg flex py-[5%] items-center justify-center">
-                    <p className='text-4xl font-bold text-center'>24/7 Live video feed from different angles</p>
+                <div className="w-full lg:w-[30%] text-black dark:text-white font-semibold text-lg flex flex-col space-y-8 py-[5%] items-center justify-center">
+                    <p className='text-4xl font-bold text-center'>24/7 Live Video Feed From Different Angles</p>
+                    <div className='flex'>
+                        <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex text-[#141414] dark:text-[#f1f3f2] cursor-pointer font-bold h-full space-x-8'>
+
+                            <a href="#home" onClick={() => setSection([1,0,0,0])} className={section[0] === 1 ? "opacity-100" : "opacity-40"}>
+                                Home
+                            </a>
+
+                            <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] === 1 ? "opacity-100" : "opacity-40"}>
+                                About
+                            </a>
+
+                            <a href="#features" onClick={() => setSection([0,0,1,0])} className={section[2] === 1 ? "opacity-100" : "opacity-40"}>
+                                Features
+                            </a>
+
+                            <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] === 1 ? "opacity-100" : "opacity-40"}>
+                                Diagnose
+                            </a>
+
+                        </motion.div>
+
+ 
+                    </div>
                 </div>
 
                 <div className="flex flex-col lg:flex-row items-start justify-center w-full lg:w-[60%]">
@@ -124,21 +151,18 @@ const Home = () => {
                         />
                     </svg>
                     <ul ref={ref} className='scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
-                        <li className='rounded-3xl'>
-                            <img src={img1} alt='' className="w-full h-full object-cover rounded-2xl" onClick={() => {setVidSrc(video);}} />
-                        </li>
-                        <li className='rounded-3xl'>
-                            <img onClick={() => {setVidSrc(blast);}} src={img2} alt='' className="w-full h-full object-cover rounded-2xl" />
-                        </li>
-                        <li className='rounded-3xl'>
-                            <img src={img3} alt='' className="w-full h-full object-cover rounded-2xl" />
-                        </li>
-                        <li className='rounded-3xl'>
-                            <img src={img4} alt='' className="w-full h-full object-cover rounded-2xl" />
-                        </li>
-                        <li className='rounded-3xl'>
-                            <img src={img1} alt='' className="w-full h-full object-cover rounded-2xl" />
-                        </li>
+                        
+                        {vids.map((vid, ind) => (
+
+                            <li key={ind} className="rounded-3xl flex flex-col items-center space-y-4">
+
+                                <p className='text-xl font-bold text-black dark:text-white'>Camera {ind+1}</p>
+                                <img src={imgs[ind]} alt='' className={`w-full h-full object-cover rounded-2xl ${vidSrc[1] === ind+1 && 'border-8 border-green-600'}`} onClick={() => {setVidSrc([vid, ind+1]);}} />
+
+                            </li>
+
+                        ))}
+                        
                     </ul>
                 </div>
             </div>
