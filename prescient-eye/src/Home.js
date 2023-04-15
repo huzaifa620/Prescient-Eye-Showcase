@@ -136,6 +136,14 @@ const Home = () => {
 
  
                     </div>
+                    <ul className='list-disc text-justify space-y-2'>
+                        <li>
+                            Continuous monitoring using multiple cameras provides proactive survilleance and enables Law Enforcemnet Agencies (LEAs) to deliver quick response to breaches.
+                        </li>
+                        <li>
+                            Effective automated system built to mitigate human errors and biases that results in security leaks.
+                        </li>
+                    </ul>
                 </div>
 
                 <div className="flex flex-col lg:flex-row items-start justify-center w-full lg:w-[60%]">
@@ -150,11 +158,11 @@ const Home = () => {
                             style={{ pathLength: scrollXProgress }}
                         />
                     </svg>
-                    <ul ref={ref} className='scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
+                    <ul ref={ref} className='cam scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
                         
                         {vids.map((vid, ind) => (
 
-                            <li key={ind} className="rounded-3xl flex flex-col items-center space-y-4">
+                            <li key={ind} className="cam rounded-3xl flex flex-col items-center space-y-4">
 
                                 <p className='text-xl font-bold text-black dark:text-white'>Camera {ind+1}</p>
                                 <img src={imgs[ind]} alt='' className={`w-full h-full object-cover rounded-2xl ${vidSrc[1] === ind+1 && 'border-8 border-green-600'}`} onClick={() => {setVidSrc([vid, ind+1]);}} />

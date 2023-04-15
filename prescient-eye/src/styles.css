@@ -27,7 +27,7 @@ body {
     fill: none;
   }
   
-  ul {
+  ul.cam {
     display: flex;
     list-style: none;
     height: 400px;
@@ -38,34 +38,34 @@ body {
     margin: 0 20px;
   }
   
-  li {
+  li.cam {
     flex: 0 0 400px;
     margin: 0 20px 0 0;
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    li {
+    li.cam {
       flex: 0 0 400px;
       margin: 0 20px 0 0;
     } 
   }
 
   @media (min-width: 480px) {
-    li {
+    li.cam {
       flex: 0 0 300px;
       margin: 0 20px 0 0;
     } 
   }
 
   @media (max-width: 480px) {
-    li {
+    li.cam {
       flex: 0 0 200px;
       background: var(--accent);
       margin: 0 20px 0 0;
     } 
   }
   
-  li:last-of-type {
+  li.cam:last-of-type {
     margin: 0;
   }
   
