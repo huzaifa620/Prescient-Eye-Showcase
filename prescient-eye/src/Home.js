@@ -111,42 +111,7 @@ const Home = () => {
             
             <div className="flex w-full flex-col lg:flex-row items-center justify-center">
 
-                <div className="w-full lg:w-[30%] text-black dark:text-white font-semibold text-lg flex flex-col space-y-8 py-[5%] items-center justify-center">
-                    <p className='text-4xl font-bold text-center'>24/7 Live Video Feed From Different Angles</p>
-                    <div className='flex'>
-                        <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex text-[#141414] dark:text-[#f1f3f2] cursor-pointer font-bold h-full space-x-8'>
-
-                            <a href="#home" onClick={() => setSection([1,0,0,0])} className={section[0] === 1 ? "opacity-100" : "opacity-40"}>
-                                Home
-                            </a>
-
-                            <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] === 1 ? "opacity-100" : "opacity-40"}>
-                                About
-                            </a>
-
-                            <a href="#features" onClick={() => setSection([0,0,1,0])} className={section[2] === 1 ? "opacity-100" : "opacity-40"}>
-                                Features
-                            </a>
-
-                            <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] === 1 ? "opacity-100" : "opacity-40"}>
-                                Diagnose
-                            </a>
-
-                        </motion.div>
-
- 
-                    </div>
-                    <ul className='list-disc text-justify space-y-2'>
-                        <li>
-                            Continuous monitoring using multiple cameras provides proactive survilleance and enables Law Enforcemnet Agencies (LEAs) to deliver quick response to breaches.
-                        </li>
-                        <li>
-                            Effective automated system built to mitigate human errors and biases that results in security leaks.
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="flex flex-col lg:flex-row items-start justify-center w-full lg:w-[60%]">
+                <div className="flex flex-col lg:flex-row items-start justify-center w-full">
                     <svg id="progress" className="dark:stroke-white stroke-black" width="100" height="100" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="30" pathLength="1" className="opacity-30 dark:stroke-white stroke-black" />
                         <motion.circle
@@ -158,8 +123,21 @@ const Home = () => {
                             style={{ pathLength: scrollXProgress }}
                         />
                     </svg>
+
                     <ul ref={ref} className='cam scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
                         
+                        <li className="cam rounded-3xl flex flex-col items-center justify-center space-y-8">
+                            <p className='text-4xl font-bold'>24/7 Live Video Feed From Different Angles</p>
+                            <ul className='text-justify space-y-4'>
+                                <li>
+                                    Continuous monitoring using multiple cameras provides proactive survilleance and enables Law Enforcemnet Agencies (LEAs) to deliver quick response to breaches.
+                                </li>
+                                <li>
+                                    Effective automated system built to mitigate human errors and biases that results in security leaks.
+                                </li>
+                            </ul>
+                        </li>
+
                         {vids.map((vid, ind) => (
 
                             <li key={ind} className="cam rounded-3xl flex flex-col items-center space-y-4">
