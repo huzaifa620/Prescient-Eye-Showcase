@@ -1,6 +1,7 @@
 import Header from './Header'
 import Home from './Home';
 import logo from './logo4.png'
+import About from './About';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
       </section>
 
       <section id='about' className=''>
-        ABOUT
+        <About />
       </section>
 
       <section id='contactUs' className=''>
