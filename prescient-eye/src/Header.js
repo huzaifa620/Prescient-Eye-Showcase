@@ -19,7 +19,7 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <header className='sticky top-0 p-5 mt-2 flex flex-col items-center md:items-start justify-between w-full px-[4%] mx-auto z-20 h-fit font-sans'>
+    <header className='p-5 mt-2 flex flex-col items-center md:items-start justify-between w-full px-[4%] mx-auto z-20 h-fit font-sans'>
 
       <div className='w-full flex items-center md:items-start justify-between'>
         <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='hidden md:flex flex-col text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-y-2 font-bold h-full'>
@@ -28,16 +28,16 @@ const Header = () => {
             Home
           </a>
 
-          <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] === 1 ? "opacity-100" : "opacity-40"}>
-            About
+          <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] === 1 ? "opacity-100" : "opacity-40"}>
+            Diagnose
           </a>
 
           <a href="#features" onClick={() => setSection([0,0,1,0])} className={section[2] === 1 ? "opacity-100" : "opacity-40"}>
             Features
           </a>
 
-          <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] === 1 ? "opacity-100" : "opacity-40"}>
-            Diagnose
+          <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] === 1 ? "opacity-100" : "opacity-40"}>
+            About
           </a>
 
         </motion.div>
