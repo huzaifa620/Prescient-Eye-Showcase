@@ -43,7 +43,7 @@ function ImageSlider() {
         className="w-full h-96 object-cover rounded-3xl slider-img"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       />
       <div className="absolute h-full flex w-full items-center justify-between p-4">
         <button
