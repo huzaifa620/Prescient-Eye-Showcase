@@ -10,13 +10,13 @@ const About = () => {
   ];
 
   return (
-    <div className='flex w-full space-x-6 p-8'>
+    <div className='flex w-full space-x-6 p-24'>
         <div className='w-1/2'>
             <ImageSlider images={images} />
         </div>
 
         <div className='w-1/2'>
-            {/* <ListSlider /> */}
+            <ListSlider />
         </div>
     </div>
   )

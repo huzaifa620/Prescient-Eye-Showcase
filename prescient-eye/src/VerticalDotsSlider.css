@@ -1,0 +1,34 @@
+.myslider {
+  position: relative;
+}
+
+.item {
+  position: relative;
+  transition: transform 0.5s;
+  transform: translate3d(0, 0, 0);
+}
+
+.item.active {
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: transparent;
+  margin: 0 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dot.active {
+  background-color: white;
+}
