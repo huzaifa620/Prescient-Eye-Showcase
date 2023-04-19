@@ -42,8 +42,14 @@ const Diagnose = () => {
             </video>
         </div>
 
-        <div className='text-lg font-semibold text-black dark:text-white'>
-            Camera 1
+        <div className='flex text-lg font-semibold text-black dark:text-white space-x-6'>
+
+          <div> Camera 1 </div>
+          <div> Camera 2 </div>
+          <div> Camera 3 </div>
+          <div> Camera 4 </div>
+          <div> Camera 5 </div>
+            
         </div>
 
       </div>
