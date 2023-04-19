@@ -1,5 +1,6 @@
 import React from 'react'
 import vid1 from './vid.mp4'
+import Chart from './Chart'
 
 const Diagnose = () => {
   return (
@@ -55,7 +56,7 @@ const Diagnose = () => {
       </div>
 
       <div className='w-1/3'>
-
+        <Chart />
       </div>
 
     </div>
