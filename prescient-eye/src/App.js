@@ -2,6 +2,7 @@ import Header from './Header'
 import Home from './Home';
 import logo from './logo4.png'
 import About from './About';
+import Diagnose from './Diagnose';
 
 function App() {
   return (
@@ -20,20 +21,16 @@ function App() {
         </div>
       </section>
 
+      <section id='diagnose' className=''>
+        <Diagnose />
+      </section>
+
       <section id='features' className=''>
         FEATURES
       </section>
 
-      <section id='diagnose' className=''>
-        DIAGNOSE
-      </section>
-
       <section id='about' className=''>
         <About />
-      </section>
-
-      <section id='contactUs' className=''>
-        Contact Us
       </section>
 
     </div>
