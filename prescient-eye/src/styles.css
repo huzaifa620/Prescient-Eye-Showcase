@@ -17,55 +17,62 @@ body {
     color: var(--accent);
 }
   
-  #progress {
-    transform: rotate(-90deg);
-  }
-  
-  circle {
-    stroke-dashoffset: 0;
-    stroke-width: 15%;
-    fill: none;
-  }
-  
-  ul.cam {
-    display: flex;
-    list-style: none;
-    height: 400px;
-    width: auto;
-    overflow-x: scroll;
-    padding: 20px 0;
-    flex: 0 0 80%;
-    margin: 0 20px;
-  }
-  
+#progress {
+  transform: rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+}
+
+ul.cam {
+  display: flex;
+  list-style: none;
+  height: 400px;
+  width: auto;
+  overflow-x: scroll;
+  padding: 20px 0;
+  flex: 0 0 80%;
+  margin: 0 20px;
+}
+
+li.cam {
+  flex: 0 0 400px;
+  margin: 0 20px 0 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
   li.cam {
     flex: 0 0 400px;
     margin: 0 20px 0 0;
-  }
+  } 
+}
 
-  @media (min-width: 768px) and (max-width: 1024px) {
-    li.cam {
-      flex: 0 0 400px;
-      margin: 0 20px 0 0;
-    } 
-  }
+@media (min-width: 480px) {
+  li.cam {
+    flex: 0 0 300px;
+    margin: 0 20px 0 0;
+  } 
+}
 
-  @media (min-width: 480px) {
-    li.cam {
-      flex: 0 0 300px;
-      margin: 0 20px 0 0;
-    } 
-  }
+@media (max-width: 480px) {
+  li.cam {
+    flex: 0 0 200px;
+    background: var(--accent);
+    margin: 0 20px 0 0;
+  } 
+}
 
-  @media (max-width: 480px) {
-    li.cam {
-      flex: 0 0 200px;
-      background: var(--accent);
-      margin: 0 20px 0 0;
-    } 
-  }
-  
-  li.cam:last-of-type {
-    margin: 0;
-  }
-  
+li.cam:last-of-type {
+  margin: 0;
+}
+
+/* .slick-arrow.slick-prev {
+  position: absolute !important;
+}
+
+.slick-list {
+  position: relative !important;
+} */
