@@ -1,16 +1,24 @@
-import React from 'react'
-import vid1 from './vid.mp4'
+import React, {useState} from 'react'
 import Chart from './Chart'
+import vid1 from './vid.mp4'
+import vid2 from './blast.mp4'
+import vid3 from './vid.mp4'
+import vid4 from './blast.mp4'
+import vid5 from './vid.mp4'
 
 const Diagnose = () => {
+
+  const [vidSrc, setVidSrc] = useState([vid1, 1])
+  const [vids, setVids] = useState([vid1, vid2, vid3, vid4, vid5])
+
   return (
-    <div className='flex w-full space-x-6 p-24 h-screen'>
+    <div className='flex w-full space-x-6 p-12 h-screen'>
 
       <div className='w-1/3 flex flex-col items-center justify-center space-y-12'>
 
-        <img className='h-64 object-contain md:object-cover rounded-3xl' src='https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org' alt='' />
+        <img className='h-48 object-contain md:object-cover rounded-3xl' src='https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org' alt='' />
 
-        <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full flex flex-col rounded-3xl shadow-2xl overflow-y-auto h-[95%]'>
+        <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full flex flex-col rounded-3xl shadow-2xl overflow-y-auto h-[95%] scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
           <div className='flex flex-col border-b dark:border-[#141414] py-4'>
               <h1 className='text-2xl font-bold tracking-widest'> Name: Shari Baloch </h1>
               <p className='text-base'> Age: 32 </p>
@@ -38,25 +46,27 @@ const Diagnose = () => {
       <div className='flex flex-col w-1/3 items-center justify-center h-full space-y-12'>
 
         <div className='rounded-2xl overflow-hidden'>
-            <video autoPlay muted>
+            <video autoPlay muted key={vidSrc[0]}>
                 <source src={vid1} type="video/mp4" />
             </video>
         </div>
 
         <div className='flex text-lg font-semibold text-black dark:text-white space-x-6'>
 
-          <div> Camera 1 </div>
-          <div> Camera 2 </div>
-          <div> Camera 3 </div>
-          <div> Camera 4 </div>
-          <div> Camera 5 </div>
-            
+          {vids.map((vid, ind) => (
+
+            <div onClick={() => {setVidSrc([vid, ind+1]);}} className={`border rounded-3xl py-1 px-2 text-md cursor-pointer ${vidSrc[1] === ind+1 ? 'bg-[#f1f3f2] text-black hover:bg-black hover:text-[#f1f3f2]' : 'hover:bg-[#f1f3f2] hover:text-black'}`}> Camera {ind+1} </div>
+
+          ))}
+
         </div>
 
       </div>
 
-      <div className='w-1/3'>
-        <Chart />
+      <div className='w-1/3 flex flex-col items-center justify-center h-full space-y-12'>
+        <div className='w-full'>
+          <Chart />
+        </div>
       </div>
 
     </div>
