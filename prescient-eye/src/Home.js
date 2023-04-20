@@ -87,15 +87,15 @@ const Home = () => {
                     }
 
                     <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full xl:max-w-[60%] xl:min-w-[60%] h-fit xl:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
-                        <div className='flex flex-col border-b dark:border-[#141414] py-4'>
+                        <div className='flex flex-col border-b border-[#141414] dark:border-[#f1f3f2] py-4'>
                             <h1 className='text-2xl font-bold tracking-widest'> {name ? <Typewriter text={name} delay={200} /> : "-" } </h1>
                             <p className='text-base'>Age: {age ? <Typewriter text={age} delay={500} /> : "-" }</p>
                         </div>
-                        <div className='flex flex-col border-b dark:border-[#141414] py-4'>
+                        <div className='flex flex-col border-b border-[#141414] dark:border-[#f1f3f2] py-4'>
                             <h1 className='text-lg font-bold tracking-widest'>NATIONALITY</h1>
                             <p className='text-base'> { nationality ? <Typewriter text={nationality} delay={200} /> : "-" } </p>
                         </div>
-                        <div className='flex flex-col border-b dark:border-[#141414] py-4'>
+                        <div className='flex flex-col border-b border-[#141414] dark:border-[#f1f3f2] py-4'>
                             <h1 className='text-lg font-bold tracking-widest'>ORGANIZATION</h1>
                             <p className='text-sm'> {org ? <Typewriter text={org} delay={200} /> : "-" } </p>
                         </div>

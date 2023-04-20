@@ -6,7 +6,7 @@ import Diagnose from './Diagnose';
 
 function App() {
   return (
-    <div className="bg-gradient-to-b from-[#f1f3f2] to-[#adadad] dark:from-[#141414] dark:to-[#494848] dark:text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2] text-sm">
+    <div className="bg-gradient-to-b from-[#f1f3f2] to-[#adadad] dark:from-[#141414] dark:to-[#494848] text-black dark:text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 scrollbar-thin scrollbar-track-teal-800/20 scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2] text-sm font-sans">
 
       <Header />
 

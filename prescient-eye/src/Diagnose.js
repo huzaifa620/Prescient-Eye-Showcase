@@ -19,15 +19,15 @@ const Diagnose = () => {
         <img className='h-48 object-contain md:object-cover rounded-3xl' src='https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org' alt='' />
 
         <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full flex flex-col rounded-3xl shadow-2xl overflow-y-auto h-[95%] scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
-          <div className='flex flex-col border-b dark:border-[#141414] py-4'>
+          <div className='flex flex-col border-b border-[#141414] dark:border-[#f1f3f2] py-4'>
               <h1 className='text-2xl font-bold tracking-widest'> Name: Shari Baloch </h1>
               <p className='text-base'> Age: 32 </p>
           </div>
-          <div className='flex flex-col border-b dark:border-[#141414] py-4'>
+          <div className='flex flex-col border-b border-[#141414] dark:border-[#f1f3f2] py-4'>
               <h1 className='text-lg font-bold tracking-widest'>NATIONALITY</h1>
               <p className='text-base'> Pakistani </p>
           </div>
-          <div className='flex flex-col border-b dark:border-[#141414] py-4'>
+          <div className='flex flex-col border-b border-[#141414] dark:border-[#f1f3f2] py-4'>
               <h1 className='text-lg font-bold tracking-widest'>ORGANIZATION</h1>
               <p className='text-sm'> Balochistan Liberation Army </p>
           </div>
@@ -55,7 +55,7 @@ const Diagnose = () => {
 
           {vids.map((vid, ind) => (
 
-            <div onClick={() => {setVidSrc([vid, ind+1]);}} className={`border border-black dark:border-white rounded-3xl py-1 px-2 text-md cursor-pointer ${vidSrc[1] === ind+1 ? 'bg-black dark:bg-[#f1f3f2] text-white dark:text-black hover:bg-[#f1f3f2] dark:hover:bg-black hover:text-black dark:hover:text-[#f1f3f2]' : 'hover:bg-black dark:hover:bg-[#f1f3f2] hover:text-white dark:hover:text-black'}`}> Camera {ind+1} </div>
+            <div onClick={() => {setVidSrc([vid, ind+1]);}} className={`text-base border border-black dark:border-white rounded-3xl py-1 px-2 text-md cursor-pointer ${vidSrc[1] === ind+1 ? 'bg-black dark:bg-[#f1f3f2] text-white dark:text-black hover:bg-[#f1f3f2] dark:hover:bg-black hover:text-black dark:hover:text-[#f1f3f2]' : 'hover:bg-black dark:hover:bg-[#f1f3f2] hover:text-white dark:hover:text-black'}`}> Camera {ind+1} </div>
 
           ))}
 
