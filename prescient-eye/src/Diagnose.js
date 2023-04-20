@@ -55,7 +55,7 @@ const Diagnose = () => {
 
           {vids.map((vid, ind) => (
 
-            <div onClick={() => {setVidSrc([vid, ind+1]);}} className={`border rounded-3xl py-1 px-2 text-md cursor-pointer ${vidSrc[1] === ind+1 ? 'bg-[#f1f3f2] text-black hover:bg-black hover:text-[#f1f3f2]' : 'hover:bg-[#f1f3f2] hover:text-black'}`}> Camera {ind+1} </div>
+            <div onClick={() => {setVidSrc([vid, ind+1]);}} className={`border border-black dark:border-white rounded-3xl py-1 px-2 text-md cursor-pointer ${vidSrc[1] === ind+1 ? 'bg-black dark:bg-[#f1f3f2] text-white dark:text-black hover:bg-[#f1f3f2] dark:hover:bg-black hover:text-black dark:hover:text-[#f1f3f2]' : 'hover:bg-black dark:hover:bg-[#f1f3f2] hover:text-white dark:hover:text-black'}`}> Camera {ind+1} </div>
 
           ))}
 
