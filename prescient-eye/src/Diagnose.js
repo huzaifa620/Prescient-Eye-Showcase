@@ -14,7 +14,7 @@ const Diagnose = () => {
   return (
     <div className='flex w-full space-x-6 p-12 h-screen'>
 
-      <div className='w-1/3 flex flex-col items-center justify-center space-y-12'>
+      <div className='w-[30%] flex flex-col items-center justify-center space-y-12'>
 
         <img className='h-48 object-contain md:object-cover rounded-3xl' src='https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org' alt='' />
 
@@ -43,10 +43,10 @@ const Diagnose = () => {
 
       </div>
 
-      <div className='flex flex-col w-1/3 items-center justify-center h-full space-y-12'>
+      <div className='flex flex-col w-[40%] items-center justify-center h-full space-y-12'>
 
         <div className='rounded-2xl overflow-hidden'>
-            <video autoPlay muted key={vidSrc[0]}>
+            <video controls controlsList="nodownload noremoteplayback" autoPlay muted key={vidSrc[0]}>
                 <source src={vidSrc[0]} type="video/mp4" />
             </video>
         </div>
@@ -63,7 +63,7 @@ const Diagnose = () => {
 
       </div>
 
-      <div className='w-1/3 flex flex-col items-center justify-center h-full space-y-12'>
+      <div className='w-[30%] flex flex-col items-center justify-center h-full space-y-12'>
         <div className='w-full'>
           <Chart />
         </div>
