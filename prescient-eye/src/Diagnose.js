@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import Chart from './Chart'
-import vid1 from './vid.mp4'
+import vid1 from './vidBox.mp4'
 import vid2 from './blast.mp4'
-import vid3 from './vid.mp4'
+import vid3 from './vidBox.mp4'
 import vid4 from './blast.mp4'
-import vid5 from './vid.mp4'
+import vid5 from './vidBox.mp4'
 
 const Diagnose = () => {
 
@@ -47,7 +47,7 @@ const Diagnose = () => {
 
         <div className='rounded-2xl overflow-hidden'>
             <video autoPlay muted key={vidSrc[0]}>
-                <source src={vid1} type="video/mp4" />
+                <source src={vidSrc[0]} type="video/mp4" />
             </video>
         </div>
 
