@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts';
 
 const MyChart = () => {
+  const [isDark, setIsDark] = useState(document.body.classList.contains('dark'));
+
+  // useEffect(() => {
+  //   setIsDark(document.body.classList.contains('dark'));
+  // }, []);
+
+  const labelColors = {
+    light: ['#000'],
+    dark: ['#fff'],
+  };
+
   const options = {
     chart: {
       id: 'mychart'
     },
     legend: {
       labels: {
-        colors: '#ffffff'
+        colors: labelColors[isDark ? 'dark' : 'light'],
       }
     },
     series: [
@@ -27,7 +38,7 @@ const MyChart = () => {
       categories: ['0', '250', '500', '750', '1000', '1250', '1500', '1750'],
       labels: {
         style: {
-          colors: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'], // set the label color
+          colors: labelColors[isDark ? 'dark' : 'light'][0],
         },
       },
     },
@@ -38,12 +49,12 @@ const MyChart = () => {
       title: {
         text: 'Anomaly Score',
         style: {
-          color: '#ffffff'
+          color: labelColors[isDark ? 'dark' : 'light'][0],
         }
       },
       labels: {
         style: {
-          colors: '#ffffff'
+          colors: labelColors[isDark ? 'dark' : 'light'],
         },
       },
     }
