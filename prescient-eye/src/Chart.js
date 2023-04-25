@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Chart from 'react-apexcharts';
+import { ThemeContext } from './Context';
 
 const MyChart = () => {
-  const [isDark, setIsDark] = useState(document.body.classList.contains('dark'));
-
-  // useEffect(() => {
-  //   setIsDark(document.body.classList.contains('dark'));
-  // }, []);
+  const { isDark, toggleTheme } = useContext(ThemeContext)
 
   const labelColors = {
     light: ['#000'],

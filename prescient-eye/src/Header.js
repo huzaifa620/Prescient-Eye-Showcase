@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 import logo from './logo4.png'
+import { ThemeContext } from './Context';
 
 const Header = () => {
 
   const [section, setSection] = useState([1,0,0,0])
-  const [isDark, setisDark] = useState(true)
-
-  const toggleDark = () => {
-    document.body.classList.toggle('dark')
-    setisDark(!isDark)
-  }
+  const { isDark, toggleTheme } = useContext(ThemeContext)
 
   const fillColor = isDark ? 'white' : 'black'
   const strokeColor = isDark ? 'black' : 'white'
@@ -60,7 +56,7 @@ const Header = () => {
             <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" /> </svg> 
           )}
 
-          {isDark ? <SunIcon onClick={toggleDark} className='h-6 md:mt-[10%]' /> : <MoonIcon onClick={toggleDark} className='h-6 md:mt-[10%]' />}
+          {isDark ? <SunIcon onClick={toggleTheme} className='h-6 md:mt-[10%]' /> : <MoonIcon onClick={toggleTheme} className='h-6 md:mt-[10%]' />}
 
         </motion.div>
 
