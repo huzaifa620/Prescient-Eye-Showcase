@@ -21,16 +21,23 @@ const Features = () => {
   useEffect(() => {
     // Set initial opacity to 0
     const image = document.querySelector(".slider-img");
+    const title = document.querySelector("h1.text-5xl");
     image.style.opacity = 0;
+    title.style.opacity = 0;
 
     // Animate opacity to 1
     const animation = image.animate([{ opacity: 0 }, { opacity: 1 }], {
       duration: 500,
       fill: "forwards"
     });
+    const titleAnimation = title.animate([{ opacity: 0 }, { opacity: 1 }], {
+      duration: 500,
+      fill: "forwards"
+    });
 
     return () => {
       // Stop animation when component unmounts
+      titleAnimation.cancel();
       animation.cancel();
     }
   }, [currentImage]);
