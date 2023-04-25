@@ -5,6 +5,24 @@ import Typewriter from './Typewriter';
 
 const Features = () => {
 
+  const [currentChar, setCurrentChar] = useState(0);
+  const updateText = (text, delay) => {
+    const textLength = text.length;
+    let currentIndex = 0;
+  
+    const intervalId = setInterval(() => {
+      setCurrentChar(currentIndex);
+      currentIndex++;
+  
+      if (currentIndex === textLength) {
+        clearInterval(intervalId);
+      }
+    }, delay);
+  
+    return intervalId;
+  }  
+
+
   const [currentImage, setCurrentImage] = useState(0);
 
   const prevImage = () => {
@@ -25,23 +43,31 @@ const Features = () => {
     const title = document.querySelector("h1.text-5xl");
     image.style.opacity = 0;
     title.style.opacity = 0;
-
+  
     // Animate opacity to 1
-    const animation = image.animate([{ opacity: 0 }, { opacity: 1 }], {
+    const opacityAnimation = image.animate([{ opacity: 0 }, { opacity: 1 }], {
       duration: 500,
       fill: "forwards"
     });
+
     const titleAnimation = title.animate([{ opacity: 0 }, { opacity: 1 }], {
       duration: 500,
       fill: "forwards"
     });
-
+  
+    // Start typewriter animation
+    const text = descs[currentImage];
+    const delay = 50;
+    const textAnimation = updateText(text, delay);
+  
     return () => {
-      // Stop animation when component unmounts
+      // Stop animations when component unmounts
+      opacityAnimation.cancel();
       titleAnimation.cancel();
-      animation.cancel();
+      clearInterval(textAnimation);
     }
   }, [currentImage]);
+  
 
   return (
     <div className='flex w-full space-x-6 p-24 h-screen'>
@@ -96,8 +122,8 @@ const Features = () => {
         </div>
 
         <div className='w-1/2 flex items-center justify-center'>
-          <div className="w-full flex items-center justify-center text-center h-1/2 text-4xl">
-            <Typewriter text={descs[currentImage]} delay={50} />
+          <div className='w-full flex items-center justify-center text-center h-1/2 text-4xl'>
+            {descs[currentImage].substring(0, currentChar)}
           </div>
         </div>
     </div>
