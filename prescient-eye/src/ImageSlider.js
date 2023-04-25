@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import content from "./Content";
+ 
 function ImageSlider() {
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -12,11 +13,8 @@ function ImageSlider() {
     setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
   };
   
-  const images = [
-    "https://d33wubrfki0l68.cloudfront.net/dd23708ebc4053551bb33e18b7174e73b6e1710b/dea24/static/images/wallpapers/shared-colors@2x.png",
-    "https://d33wubrfki0l68.cloudfront.net/49de349d12db851952c5556f3c637ca772745316/cfc56/static/images/wallpapers/bridge-02@2x.png",
-    "https://d33wubrfki0l68.cloudfront.net/594de66469079c21fc54c14db0591305a1198dd6/3f4b1/static/images/wallpapers/bridge-01@2x.png"
-  ];
+  const images = content.map(item => item.image);
+
   useEffect(() => {
     // Set initial opacity to 0
     const image = document.querySelector(".slider-img");
@@ -35,13 +33,13 @@ function ImageSlider() {
   }, [currentImage]);
 
   return (
-    <motion.div className="relative flex">
+    <motion.div className="relative flex min-h-full">
 
       <motion.img
         key={currentImage}
         src={images[currentImage]}
         alt="slider"
-        className="w-full object-cover rounded-3xl slider-img"
+        className="w-full object-fit rounded-3xl slider-img"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
