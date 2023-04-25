@@ -3,16 +3,11 @@ import ImageSlider from './ImageSlider'
 import ListSlider from './ListSlider'
 
 const Features = () => {
-  const images = [
-    "https://via.placeholder.com/300x200",
-    "https://via.placeholder.com/300x200/FF0000",
-    "https://via.placeholder.com/300x200/0000FF",
-  ];
 
   return (
     <div className='flex w-full space-x-6 p-24'>
         <div className='w-1/2'>
-          <ImageSlider images={images} />
+          <ImageSlider />
         </div>
 
         <div className='w-1/2'>
