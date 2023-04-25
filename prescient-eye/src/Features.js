@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from "framer-motion";
 import content from "./Content";
+import Typewriter from './Typewriter';
 
 const Features = () => {
 
@@ -96,7 +97,7 @@ const Features = () => {
 
         <div className='w-1/2 flex items-center justify-center'>
           <div className="w-full flex items-center justify-center text-center h-1/2 text-4xl">
-              {descs[currentImage]}
+            <Typewriter text={descs[currentImage]} delay={50} />
           </div>
         </div>
     </div>
