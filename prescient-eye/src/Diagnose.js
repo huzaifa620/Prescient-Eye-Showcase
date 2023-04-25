@@ -18,7 +18,8 @@ const Diagnose = () => {
 
         <img className='h-48 object-contain md:object-cover rounded-3xl' src='https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org' alt='' />
 
-        <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full flex flex-col rounded-3xl shadow-2xl overflow-y-auto h-[95%] scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
+        <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full flex flex-col rounded-3xl shadow-2xl overflow-y-auto h-1/2 scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
+
           <div className='flex flex-col border-b border-[#141414] dark:border-[#f1f3f2] py-4'>
               <h1 className='text-2xl font-bold tracking-widest'> Name: Shari Baloch </h1>
               <p className='text-base'> Age: 32 </p>
@@ -46,8 +47,8 @@ const Diagnose = () => {
       <div className='flex flex-col w-[40%] items-center justify-center h-full space-y-12'>
 
         <div className='rounded-2xl overflow-hidden'>
-            <video controls controlsList="nodownload noremoteplayback" autoPlay muted key={vidSrc[0]}>
-                <source src={vidSrc[0]} type="video/mp4" />
+            <video controls autoPlay muted key={vidSrc[0]}>
+              <source src={vidSrc[0]} type="video/mp4" />
             </video>
         </div>
 
@@ -64,7 +65,7 @@ const Diagnose = () => {
       </div>
 
       <div className='w-[30%] flex flex-col items-center justify-center h-full space-y-12'>
-        <div className='w-full'>
+        <div className='w-full scale-110'>
           <Chart />
         </div>
       </div>
