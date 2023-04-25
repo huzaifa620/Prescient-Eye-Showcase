@@ -41,7 +41,7 @@ function ImageSlider() {
         key={currentImage}
         src={images[currentImage]}
         alt="slider"
-        className="w-full h-96 object-cover rounded-3xl slider-img"
+        className="w-full object-cover rounded-3xl slider-img"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
