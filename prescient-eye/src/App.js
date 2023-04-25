@@ -1,7 +1,7 @@
 import Header from './Header'
 import Home from './Home';
 import logo from './logo4.png'
-import About from './About';
+import Features from './Features';
 import Diagnose from './Diagnose';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
       <Header />
 
-      <section id='home' className=''>
+      <section id='home' className='border-b border-black dark:border-white pb-24'>
         <div className="relative bg-cover bg-center">
           <div className="absolute inset-0 mt-[5%] hidden md:flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
             <img className='rounded-full' src={logo} alt='' />
@@ -21,16 +21,16 @@ function App() {
         </div>
       </section>
 
-      <section id='diagnose' className=''>
+      <section id='diagnose' className='border-b border-black dark:border-white pb-24'>
         <Diagnose />
       </section>
 
-      <section id='features' className=''>
-        FEATURES
+      <section id='features' className='border-b border-black dark:border-white pb-24'>
+        <Features />
       </section>
 
-      <section id='about' className=''>
-        <About />
+      <section id='about' className='border-b border-black dark:border-white pb-24'>
+        About
       </section>
 
     </div>
