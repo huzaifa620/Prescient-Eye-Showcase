@@ -36,6 +36,7 @@ function ImageSlider() {
 
   return (
     <motion.div className="relative flex">
+
       <motion.img
         key={currentImage}
         src={images[currentImage]}
@@ -61,6 +62,19 @@ function ImageSlider() {
           
         </button>
       </div>
+
+      <div className="absolute bottom-0 w-full flex justify-center mb-4">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            className={`w-2 h-2 rounded-full mx-2 cursor-pointer ${
+              currentImage === index ? "bg-white" : "bg-gray-500"
+            }`}
+            onClick={() => setCurrentImage(index)}
+          ></div>
+        ))}
+      </div>
+      
     </motion.div>
   );
 }
