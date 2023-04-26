@@ -18,7 +18,7 @@ Prescient Eye is a software based Video Content Analytics (VCA) that provides ce
 
 Icarus Engineering has expertise in developing AI and Deep Neural Network based VCA softwares that are used to detect, identify and distinguish various objects in live video feeds.
 
-Prominent features of Prescient Eye system are as follows: 
+Prescient Eye System is capable of integration of following features also: 
 	i) Real-time autonomus monitoring and survellience
 	ii) Offline processing capabilities for data securities.
 	iii) Encrypted transmission of data from CCTV to Central Server and analysis system.

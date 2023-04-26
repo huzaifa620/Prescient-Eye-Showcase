@@ -8,12 +8,12 @@ import robbery from './robbery.jpg'
 
 
 const content = [
-    {"title": "Bag", "image": bags, "desc": "Real-time autonomous monitoring and survellience."},
-    {"title": "Car", "image": cars, "desc": "Offline processing capabilities for data securities."},
-    {"title": "CCTV", "image": car, "desc": "Encrypted transmission of data from CCTV to Central Server and analysis system."},
-    {"title": "Open World Anomaly", "image": openWorld, "desc": "Complete edge capabilities over data protection and threat analysis."},
-    {"title": "Arms Detection", "image": robbery, "desc": "Unsupervised learning automation model for continous training and processing."},
-    {"title": "Robbery detection", "image": pistol, "desc": "99% accuracy in terms of anomaly detection."},
+    {"title": "Unattended Luggage Detection", "image": bags, "desc": "Real-time autonomous monitoring and survellience."},
+    {"title": "Suspected Car Detection", "image": cars, "desc": "Offline processing capabilities for data securities."},
+    {"title": "Autonomous Number Plate Detetcion", "image": car, "desc": "Encrypted transmission of data from CCTV to Central Server and analysis system."},
+    {"title": "Unattended Vehicle Identification", "image": openWorld, "desc": "Complete edge capabilities over data protection and threat analysis."},
+    {"title": "Robber and Arms Detection", "image": robbery, "desc": "Unsupervised learning automation model for continous training and processing."},
+    {"title": "Suspected Weapon Identification", "image": pistol, "desc": "99% accuracy in terms of anomaly detection."},
     {"title": "3D Face regeneration", "image": faces, "desc": "Vision based analytics."} 
 ]
 

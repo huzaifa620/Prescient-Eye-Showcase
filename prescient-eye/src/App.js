@@ -25,7 +25,7 @@ function App() {
         <Diagnose />
       </section>
 
-      <section id='features' className='border-b border-black dark:border-white pb-24 pt-24'>
+      <section id='features' className='border-b border-black dark:border-white pb-24 pt-20'>
         <Features />
       </section>
 
