@@ -77,7 +77,7 @@ const About = () => {
   return (
 
     <div className='flex flex-col w-full p-24 h-screen'>
-        <div className='flex items-center px-24 pt-24 text-5xl font-bold tracking-widest'>
+        <div className='flex items-center px-24 pt-24 text-5xl font-bold tracking-widest pl-[11%]'>
             Icarus Enineering
         </div>
 
