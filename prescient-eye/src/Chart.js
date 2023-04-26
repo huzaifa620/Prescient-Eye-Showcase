@@ -12,7 +12,26 @@ const MyChart = () => {
 
   const options = {
     chart: {
-      id: 'mychart'
+      id: 'mychart',
+      toolbar: false
+    },
+    grid: {
+      strokeDashArray: 4,
+      borderColor: labelColors[isDark ? 'dark' : 'light'][0],
+      xaxis: {
+        lines: {
+          show: false
+        }
+      },   
+      yaxis: {
+        lines: {
+          show: true
+        }
+      },
+      padding: {
+        left: 20,
+        right: 20
+      }
     },
     legend: {
       labels: {
@@ -35,6 +54,8 @@ const MyChart = () => {
       categories: ['0', '250', '500', '750', '1000', '1250', '1500', '1750'],
       labels: {
         style: {
+          fontSize: '16px',
+          fontFamily: '',
           colors: labelColors[isDark ? 'dark' : 'light'][0],
         },
       },
@@ -47,11 +68,13 @@ const MyChart = () => {
         text: 'Anomaly Score',
         style: {
           color: labelColors[isDark ? 'dark' : 'light'][0],
+          fontSize: '15px'
         }
       },
       labels: {
         style: {
           colors: labelColors[isDark ? 'dark' : 'light'],
+          fontSize: '16px',
         },
       },
     }
