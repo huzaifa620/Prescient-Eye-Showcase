@@ -18,7 +18,7 @@ const Header = () => {
     <header className='p-5 mt-2 flex flex-col fixed items-center md:items-start justify-between w-full px-[4%] mx-auto z-20 h-fit font-sans'>
 
       <div className='w-full flex items-center md:items-start justify-between'>
-        <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='hidden md:flex flex-col text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-y-2 font-bold h-full'>
+        <motion.div initial={{ x: -500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='hidden md:flex flex-col text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-y-2 font-bold w-[215px] h-full'>
 
           <a href="#home" onClick={() => setSection([1,0,0,0])} className={section[0] === 1 ? "opacity-100" : "opacity-40"}>
             Home
@@ -38,12 +38,12 @@ const Header = () => {
 
         </motion.div>
 
-        <motion.div initial={{ y: -100, opacity: 0, scale: 0.5 }} animate={{ y: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row items-center space-x-4 h-full'>
+        <motion.div initial={{ y: -100, opacity: 0, scale: 0.5 }} animate={{ y: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row items-center space-x-4 w-[215px] h-full'>
           <img className='rounded-full h-16 w-16' src={logo} alt=''/>
           <div className='text-lg font-bold text-black dark:text-white'>Prescient Eye</div>
         </motion.div>
 
-        <motion.div initial={{ x: 500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row-reverse md:flex-row items-center text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-x-4 h-full'>
+        <motion.div initial={{ x: 500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row-reverse md:flex-row items-center text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-x-4 w-[215px] h-full'>
 
           <a className='hidden md:flex space-x-1 mt-[10%] items-center bg-transparent px-3 py-1 rounded-3xl text-lg'>
             Icarus Enginnering
