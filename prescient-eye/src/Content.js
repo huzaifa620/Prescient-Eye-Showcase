@@ -1,8 +1,8 @@
 import bags from './bags.jpg'
 import car from './car.jpg'
-import cars from './cars.jpg'
+import cars from './cars.png'
 import faces from './faces.jpg'
-import openWorld from './openWorld.jpg'
+import openWorld from './openWorld.png'
 import pistol from './pistol.jpg'
 import robbery from './robbery.jpg'
 
