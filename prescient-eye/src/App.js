@@ -3,6 +3,7 @@ import Home from './Home';
 import logo from './logo4.png'
 import Features from './Features';
 import Diagnose from './Diagnose';
+import About from './About';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
       </section>
 
       <section id='about' className='border-b border-black dark:border-white pb-24'>
-        About
+        <About />
       </section>
 
     </div>
