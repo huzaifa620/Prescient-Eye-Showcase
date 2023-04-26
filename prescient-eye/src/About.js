@@ -77,26 +77,28 @@ const About = () => {
   return (
 
     <div className='flex flex-col w-full p-24 h-screen'>
-        <div className='flex items-center px-24 pt-24 text-5xl font-bold tracking-widest pl-[11%]'>
-            Icarus Enineering
-        </div>
+
 
         <div className='flex w-full h-screen space-x-6'>
             <div className='w-1/2 flex flex-col space-y-12'>
 
                 <motion.div className="relative flex flex-col items-center justify-center h-full">
 
-                    <motion.img
-                        key={currentImage}
-                        src={images[currentImage]}
-                        alt="slider"
-                        className="object-fit rounded-full slider-img  border-4 border-black dark:border-white h-[75%] w-[65%] mb-8"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1 }}
-                    />
+                  <div className='flex items-center px-24 pb-12 pt-24 text-5xl font-bold tracking-widest'>
+                    Icarus Engineering
+                  </div>
 
-                    <div className="absolute h-full flex w-[65%] items-center justify-between p-4 -mt-8">
+                  <motion.img
+                      key={currentImage}
+                      src={images[currentImage]}
+                      alt="slider"
+                      className="object-fit rounded-full slider-img  border-4 border-black dark:border-white h-[75%] w-[75%] mb-8"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 1 }}
+                  />
+
+                    <div className="absolute h-full flex w-[75%] items-center justify-between p-4 mt-32">
                         <button
                             onClick={prevImage}
                             className="z-10"
