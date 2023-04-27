@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from "framer-motion"
-import content from "./Content"
 import newImg from "./new.png"
 
 const About = () => {
@@ -53,7 +52,7 @@ const About = () => {
 
     const switchImage = setTimeout(() => {
       setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
-    }, 600000);
+    }, 60000);
   
     return () => {
       // Stop animations when component unmounts
@@ -116,7 +115,7 @@ const About = () => {
           
       </motion.div>
 
-      <div className='w-full xl:w-1/2 flex items-end justify-center xl:h-[80%]'>
+      <div className='w-full xl:w-1/2 flex items-end justify-center xl:h-[75%]'>
         <div className='w-full flex items-center justify-center h-1/2 text-xl lg:text-2xl xl:text-4xl text-justify px-4'>
           {descs[currentImage].substring(0, currentChar)}
         </div>
