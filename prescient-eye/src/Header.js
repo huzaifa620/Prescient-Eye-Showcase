@@ -6,7 +6,6 @@ import { ThemeContext } from './Context';
 
 const Header = () => {
 
-  // const [section, setSection] = useState([1,0,0,0])
   const { isDark, toggleTheme, section, setSection } = useContext(ThemeContext)
 
   const fillColor = isDark ? 'white' : 'black'
@@ -68,16 +67,16 @@ const Header = () => {
             Home
           </a>
 
-          <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
-            About
+          <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
+            Diagnose
           </a>
 
           <a href="#features" onClick={() => setSection([0,0,1,0])} className={section[2] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
             Features
           </a>
 
-          <a href="#diagnose" onClick={() => setSection([0,0,0,1])} className={section[3] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
-            Diagnose
+          <a href="#about" onClick={() => setSection([0,1,0,0])} className={section[1] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
+            About
           </a>
         </div>
 
