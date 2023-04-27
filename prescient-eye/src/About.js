@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { motion } from "framer-motion";
-import content from "./Content";
+import { motion } from "framer-motion"
+import content from "./Content"
+import newImg from "./new.png"
 
 const About = () => {
 
@@ -19,8 +20,7 @@ const About = () => {
     }, delay);
   
     return intervalId;
-  }  
-
+  }
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -32,8 +32,8 @@ const About = () => {
     setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
   };
   
-  const images = content.map(item => item.image);
-  const descs = content.map(item => item.desc);
+  const images = ['https://miro.medium.com/v2/resize:fit:1400/1*8gmgaAkFdI-9OHY5cA93xQ.png', 'https://www.mccormick.northwestern.edu/electrical-computer/images/graduate/masters/computer-vision-and-image-processing-specialization-header.jpg', newImg]
+  const descs = ["Icarus Engineering is pioneer working on artificial intelligence (Computer Vision) based solutions for years. Designing smart vision based Video Content Analytics (VCA) solutions.", "Prescient Eye is a software based Video Content Analytics (VCA) that provides certain level of identification of real time alerts in case of unattended or suspicious individual, motion detection, unauthorized firearm detection, sucide bomber detection, anomaly detection or milicious activities like robery, stealing, assault, fighting, explosion, arrest or road accidents.", "The flow diagram of the proposed anomaly detection approach. Given the positive (containing anomaly somewhere) and negative (containing no anomaly) videos, we divide each of them into multiple temporal video segments. Then, each video is represented as a bag and each temporal segment represents an instance in the bag. After extracting C3D features for video segments, we train a fully connected neural network by utilizing a novel ranking loss function which computes the ranking loss between the highest scored instances (shown in red) in the positive bag and the negative bag."]
 
   useEffect(() => {
     // Set initial opacity to 0
@@ -51,10 +51,9 @@ const About = () => {
     const delay = 50;
     const textAnimation = updateText(text, delay);
 
-    // Switch images automatically after 5 seconds
     const switchImage = setTimeout(() => {
       setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
-    }, 10000);
+    }, 600000);
   
     return () => {
       // Stop animations when component unmounts
@@ -67,7 +66,7 @@ const About = () => {
 
   return (
 
-    <div className='flex flex-col xl:flex-row w-full p-2 xl:p-24 xl:pt-4 h-screen xl:h-[90vh] space-y-4'>
+    <div className='flex flex-col xl:flex-row w-full p-2 xl:p-24 xl:pt-4 xl:h-[90vh]'>
 
       <motion.div className="relative flex flex-col w-full xl:w-1/2 xl:space-y-10 items-center">
 
@@ -117,8 +116,8 @@ const About = () => {
           
       </motion.div>
 
-      <div className='w-full xl:w-1/2 flex items-center justify-center xl:h-[80%]'>
-        <div className='w-full flex items-center justify-center text-center h-1/2 text-xl lg:text-2xl xl:text-5xl'>
+      <div className='w-full xl:w-1/2 flex items-end justify-center xl:h-[80%]'>
+        <div className='w-full flex items-center justify-center h-1/2 text-xl lg:text-2xl xl:text-4xl text-justify px-4'>
           {descs[currentImage].substring(0, currentChar)}
         </div>
       </div>
