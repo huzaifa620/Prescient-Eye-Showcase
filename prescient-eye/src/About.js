@@ -86,7 +86,7 @@ const About = () => {
           transition={{ duration: 1 }}
         />
 
-          <div className="absolute h-[112%] md:h-[102.5%] lg:h-[103.5%] xl:h-[98%] flex w-[85%] md:w-[70%] lg:w-[50%] xl:w-[75%] items-center justify-between p-4">
+          <div className="absolute h-[112%] md:h-[102.5%] lg:h-[103.5%] xl:h-[102%] flex w-[85%] md:w-[70%] lg:w-[50%] xl:w-[75%] items-center justify-between p-4">
               <button
                   onClick={prevImage}
                   className="z-10"
