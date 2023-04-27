@@ -6,12 +6,10 @@ import { ThemeContext } from './Context';
 
 const Header = () => {
 
-  const { isDark, toggleTheme, section, setSection } = useContext(ThemeContext)
+  const { isDark, toggleTheme, section, setSection, openMenu, setOpenMenu } = useContext(ThemeContext)
 
   const fillColor = isDark ? 'white' : 'black'
   const strokeColor = isDark ? 'black' : 'white'
-  
-  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <header className='p-5 mt-2 flex flex-col items-center md:items-start justify-between w-full px-[4%] mx-auto z-20 h-fit font-sans'>
@@ -62,7 +60,7 @@ const Header = () => {
       </div> 
       {openMenu && (
 
-        <div className="w-full h-fit bg-[#141414] dark:bg-[#f1f3f2] md:hidden items-center flex flex-col space-y-2 font-medium p-4 text-[#f1f3f2] dark:text-[#141414] absolute mt-[20%]">
+        <div className="w-full h-full z-30 bg-[#141414] dark:bg-[#f1f3f2] md:hidden items-center flex flex-col space-y-2 font-medium p-4 text-[#f1f3f2] dark:text-[#141414] fixed mt-[20%]">
           <a onClick={() => setSection([1,0,0,0])} className={section[0] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"} href="#home">
             Home
           </a>

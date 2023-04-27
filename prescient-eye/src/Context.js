@@ -14,9 +14,10 @@ const ThemeProvider = ({ children }) => {
   };
 
   const [section, setSection] = useState([1,0,0,0])
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <ThemeContext.Provider value={{ isDark, toggleTheme, section, setSection }}>
+    <ThemeContext.Provider value={{ isDark, toggleTheme, section, setSection, openMenu, setOpenMenu }}>
       {children}
     </ThemeContext.Provider>
   );
