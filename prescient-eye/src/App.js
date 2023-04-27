@@ -22,18 +22,39 @@ function App() {
       </section>
 
       <section id='diagnose' className='border-b border-black dark:border-white'>
-        <Header />
-        <Diagnose />
+        <div className="relative bg-cover bg-center">
+          <div className="absolute inset-0 mt-[5%] hidden md:flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
+            <img className='rounded-full' src={logo} alt='' />
+          </div>
+          <div className="relative z-10">
+            <Header />
+            <Diagnose />
+          </div>
+        </div>
       </section>
 
       <section id='features' className='border-b border-black dark:border-white'>
-        <Header />
-        <Features />
+        <div className="relative bg-cover bg-center">
+          <div className="absolute inset-0 mt-[5%] hidden md:flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
+            <img className='rounded-full' src={logo} alt='' />
+          </div>
+          <div className="relative z-10">
+            <Header />
+            <Features />
+          </div>
+        </div>
       </section>
 
       <section id='about' className='border-b border-black dark:border-white'>
-        <Header />
-        <About />
+        <div className="relative bg-cover bg-center">
+            <div className="absolute inset-0 mt-[5%] hidden md:flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
+              <img className='rounded-full' src={logo} alt='' />
+            </div>
+            <div className="relative z-10">
+              <Header />
+              <About />
+          </div>
+        </div>
       </section>
 
     </div>
