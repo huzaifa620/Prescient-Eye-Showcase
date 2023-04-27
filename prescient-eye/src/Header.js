@@ -6,8 +6,8 @@ import { ThemeContext } from './Context';
 
 const Header = () => {
 
-  const [section, setSection] = useState([1,0,0,0])
-  const { isDark, toggleTheme } = useContext(ThemeContext)
+  // const [section, setSection] = useState([1,0,0,0])
+  const { isDark, toggleTheme, section, setSection } = useContext(ThemeContext)
 
   const fillColor = isDark ? 'white' : 'black'
   const strokeColor = isDark ? 'black' : 'white'

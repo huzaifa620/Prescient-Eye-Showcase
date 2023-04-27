@@ -13,8 +13,10 @@ const ThemeProvider = ({ children }) => {
     setIsDark(!isDark);
   };
 
+  const [section, setSection] = useState([1,0,0,0])
+
   return (
-    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDark, toggleTheme, section, setSection }}>
       {children}
     </ThemeContext.Provider>
   );
