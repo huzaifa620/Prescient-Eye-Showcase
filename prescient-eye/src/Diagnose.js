@@ -12,9 +12,9 @@ const Diagnose = () => {
   const [vids, setVids] = useState([vid1, vid2, vid3, vid4, vid5])
 
   return (
-    <div className='flex flex-col lg:flex-row w-full space-x-0 lg:space-x-6 p-4 lg:p-12 min-h-screen space-y-12 mt-24 lg:mt-0'>
+    <div className='flex flex-col xl:flex-row w-full space-x-0 xl:space-x-6 p-4 xl:p-12 xl:h-screen space-y-12 items-center'>
 
-      <div className='w-full lg:w-[30%] flex flex-col items-center justify-center space-y-12'>
+      <div className='w-full xl:w-[30%] flex flex-col items-center justify-center space-y-12 h-screen xl:h-[90%]'>
 
         <img className='h-48 object-contain md:object-cover rounded-3xl' src='https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org' alt='' />
 
@@ -44,7 +44,7 @@ const Diagnose = () => {
 
       </div>
 
-      <div className='flex flex-col w-full lg:w-[40%] items-center justify-center h-full space-y-12'>
+      <div className='flex flex-col w-full xl:w-[40%] items-center justify-center h-full space-y-12'>
 
         <div className='rounded-2xl overflow-hidden'>
             <video controls autoPlay muted key={vidSrc[0]}>
@@ -52,7 +52,7 @@ const Diagnose = () => {
             </video>
         </div>
 
-        <div className='flex text-lg font-semibold text-black dark:text-white space-x-1 lg:space-x-6 items-center'>
+        <div className='flex text-lg font-semibold text-black dark:text-white space-x-1 xl:space-x-6 items-center'>
 
           {vids.map((vid, ind) => (
 
@@ -64,8 +64,8 @@ const Diagnose = () => {
 
       </div>
 
-      <div className='w-full lg:w-[30%] flex flex-col items-center justify-center h-full space-y-12'>
-        <div className='w-full lg:scale-110'>
+      <div className='w-full xl:w-[30%] flex flex-col items-center justify-center h-full space-y-12'>
+        <div className='w-full xl:scale-110'>
           <Chart />
         </div>
       </div>
