@@ -58,8 +58,8 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='flex flex-col'>
-            <div className='w-full h-fit mt-10 flex flex-col xl:flex-row items-center xl:space-x-6 py-6 px-[2%] xl:px-[5%] font-sans'>
+        <div className='flex flex-col pb-12'>
+            <div className='w-full h-fit flex flex-col xl:flex-row items-center xl:space-x-6 py-6 px-[2%] xl:px-[5%]'>
 
                 <div className='w-full xl:w-1/2 h-fit flex flex-col items-center space-y-2'>
                     <div className='rounded-2xl overflow-hidden'>
@@ -126,7 +126,7 @@ const Home = () => {
 
                     <ul ref={ref} className='cam scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
                         
-                        <li className="cam rounded-3xl flex flex-col items-center justify-center space-y-8">
+                        <li className="cam rounded-3xl flex flex-col items-center justify-center space-y-8 p-4 md:p-0">
                             <p className='text-4xl font-bold'>24/7 Live Video Feed From Different Angles</p>
                             <ul className='text-justify space-y-4'>
                                 <li>

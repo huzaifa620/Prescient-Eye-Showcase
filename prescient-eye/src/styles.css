@@ -59,7 +59,7 @@ li.cam {
 
 @media (max-width: 480px) {
   li.cam {
-    flex: 0 0 200px;
+    flex: 0 0 250px;
     background: var(--accent);
     margin: 0 20px 0 0;
   } 
@@ -68,11 +68,3 @@ li.cam {
 li.cam:last-of-type {
   margin: 0;
 }
-
-/* .slick-arrow.slick-prev {
-  position: absolute !important;
-}
-
-.slick-list {
-  position: relative !important;
-} */

@@ -12,7 +12,7 @@ const Diagnose = () => {
   const [vids, setVids] = useState([vid1, vid2, vid3, vid4, vid5])
 
   return (
-    <div className='flex flex-col xl:flex-row w-full space-x-0 xl:space-x-6 p-4 xl:p-12 xl:h-screen space-y-12 items-center'>
+    <div className='flex flex-col xl:flex-row w-full space-x-0 xl:space-x-6 p-4 xl:p-12 xl:h-[87vh] space-y-12 items-center'>
 
       <div className='w-full xl:w-[30%] flex flex-col items-center justify-center space-y-12 h-screen xl:h-[90%]'>
 
