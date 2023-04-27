@@ -1,9 +1,36 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Chart from 'react-apexcharts';
 import { ThemeContext } from './Context';
 
 const MyChart = () => {
   const { isDark, toggleTheme } = useContext(ThemeContext)
+
+  const [seriesData, setSeriesData] = useState([0.9, 0.9, 0.9, 0.9]);
+  const [areaData, setAreaData] = useState([null, null, null, null, 1, 1, 1, null]);
+  const [elapsedTime, setElapsedTime] = useState(0);
+
+  useEffect(() => {
+    if (elapsedTime >= 10) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
+
+      setSeriesData((prevSeriesData) => {
+        const newSeriesData = [...prevSeriesData];
+        newSeriesData[newSeriesData.length - 1] += Math.random() / 10;
+        return newSeriesData;
+      });
+
+      setAreaData((prevAreaData) => {
+        const newAreaData = [...prevAreaData.slice(1), null];
+        return newAreaData;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [elapsedTime]);
 
   const labelColors = {
     light: ['#000'],
@@ -42,12 +69,12 @@ const MyChart = () => {
       {
         name: '',
         type: 'line',
-        data: [0.9, 0.9, 0.9, 0.9]
+        data: seriesData
       },
       {
         name: '',
         type: 'area',
-        data: [null, null, null, null, 1, 1, 1, null],
+        data: areaData,
       }
     ],
     xaxis: {
@@ -72,6 +99,7 @@ const MyChart = () => {
         }
       },
       labels: {
+        formatter: (value) => value?.toFixed(1),
         style: {
           colors: labelColors[isDark ? 'dark' : 'light'],
           fontSize: '16px',
