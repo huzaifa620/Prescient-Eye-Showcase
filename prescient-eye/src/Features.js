@@ -39,7 +39,7 @@ const Features = () => {
   useEffect(() => {
     // Set initial opacity to 0
     const image = document.querySelector(".slider-img");
-    const title = document.querySelector("h1.text-4xl");
+    const title = document.querySelector("h1#title");
     image.style.opacity = 0;
     title.style.opacity = 0;
   
@@ -66,15 +66,14 @@ const Features = () => {
       clearInterval(textAnimation);
     }
   }, [currentImage]);
-  
 
   return (
-    <div className='flex w-full space-x-6 p-24 h-screen'>
-        <div className='w-3/4 flex flex-col space-y-12 h-[75%]'>
+    <div className='flex flex-col xl:flex-row w-full xl:space-x-6 p-2 xl:p-24 xl:h-screen mt-8 xl:mt-0'>
+        <div className='w-full xl:w-3/4 flex flex-col space-y-2 xl:space-y-12 h-[75%]'>
 
-          <p className='text-5xl'>Prescient Eye System is capable of integration of following features:</p>
+          <p className='text-2xl xl:text-5xl'>Prescient Eye System is capable of integration of following features:</p>
 
-          <h1 className='text-4xl tracking-widest font-bold uppercase'>
+          <h1 id='title' className='text-xl xl:text-4xl tracking-widest font-bold uppercase text-center xl:text-left'>
             {titles[currentImage]}
           </h1>
 
@@ -84,7 +83,7 @@ const Features = () => {
               key={currentImage}
               src={images[currentImage]}
               alt="slider"
-              className="w-full object-fit rounded-3xl slider-img  border-4 border-black dark:border-white h-[500px] mb-8"
+              className="w-full object-fit rounded-3xl slider-img  border-4 border-black dark:border-white h-[250px] xl:h-[500px] mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
@@ -123,8 +122,8 @@ const Features = () => {
 
         </div>
 
-        <div className='w-1/2 flex items-center justify-center'>
-          <div className='w-full flex items-center justify-center text-center h-1/2 text-5xl'>
+        <div className='w-full xl:w-1/2 flex items-center justify-center'>
+          <div className='w-full flex items-center justify-center text-center h-1/2 text-xl xl:text-5xl'>
             {descs[currentImage].substring(0, currentChar)}
           </div>
         </div>

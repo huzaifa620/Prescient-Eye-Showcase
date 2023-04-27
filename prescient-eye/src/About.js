@@ -33,23 +33,15 @@ const About = () => {
   };
   
   const images = content.map(item => item.image);
-  const titles = content.map(item => item.title);
   const descs = content.map(item => item.desc);
 
   useEffect(() => {
     // Set initial opacity to 0
     const image = document.querySelector(".slider-img");
-    const title = document.querySelector("h1.text-4xl");
     image.style.opacity = 0;
-    title.style.opacity = 0;
   
     // Animate opacity to 1
     const opacityAnimation = image.animate([{ opacity: 0 }, { opacity: 1 }], {
-      duration: 500,
-      fill: "forwards"
-    });
-
-    const titleAnimation = title.animate([{ opacity: 0 }, { opacity: 1 }], {
       duration: 500,
       fill: "forwards"
     });
@@ -67,7 +59,6 @@ const About = () => {
     return () => {
       // Stop animations when component unmounts
       opacityAnimation.cancel();
-      titleAnimation.cancel();
       clearInterval(textAnimation);
       clearTimeout(switchImage);
     }
