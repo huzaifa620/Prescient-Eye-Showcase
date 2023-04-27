@@ -37,7 +37,7 @@ const About = () => {
 
   useEffect(() => {
     // Set initial opacity to 0
-    const image = document.querySelector(".slider-img");
+    const image = document.querySelector("#about");
     image.style.opacity = 0;
   
     // Animate opacity to 1
@@ -67,25 +67,26 @@ const About = () => {
 
   return (
 
-    <div className='flex flex-col xl:flex-row w-full p-24 pt-4 h-screen'>
+    <div className='flex flex-col xl:flex-row w-full p-2 xl:p-24 xl:pt-4 h-screen xl:h-[90vh] space-y-4'>
 
-      <motion.div className="relative flex flex-col w-1/2 space-y-10 items-center justify-cente">
+      <motion.div className="relative flex flex-col w-full xl:w-1/2 xl:space-y-10 items-center">
 
-        <div className='flex items-center px-24 pb-12 text-5xl font-bold tracking-widest'>
+        <div className='flex items-center px-24 pb-12 text-2xl  lg:text-3xl xl:text-5xl font-bold tracking-widest text-center lg:text-left'>
           Icarus Engineering
         </div>
 
         <motion.img
+          id='about'
           key={currentImage}
           src={images[currentImage]}
           alt="slider"
-          className="object-fit rounded-full border-4 border-black dark:border-white h-[70%] w-[75%] mb-8"
+          className="object-fit rounded-full border-4 border-black dark:border-white h-[280px] w-[280px] md:w-[500px] md:h-[500px] xl:h-[75%] xl:w-[75%] 2xl:w-[80%] 2xl:h-[80%] mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         />
 
-          <div className="absolute h-[90%] flex w-[75%] items-center justify-between p-4">
+          <div className="absolute h-[112%] md:h-[102.5%] lg:h-[103.5%] xl:h-[98%] flex w-[85%] md:w-[70%] lg:w-[50%] xl:w-[75%] items-center justify-between p-4">
               <button
                   onClick={prevImage}
                   className="z-10"
@@ -116,10 +117,10 @@ const About = () => {
           
       </motion.div>
 
-      <div className='w-1/2 flex items-center justify-center h-[80%]'>
-      <div className='w-full flex items-center justify-center text-center h-1/2 text-5xl'>
+      <div className='w-full xl:w-1/2 flex items-center justify-center xl:h-[80%]'>
+        <div className='w-full flex items-center justify-center text-center h-1/2 text-xl lg:text-2xl xl:text-5xl'>
           {descs[currentImage].substring(0, currentChar)}
-      </div>
+        </div>
       </div>
 
     </div>
