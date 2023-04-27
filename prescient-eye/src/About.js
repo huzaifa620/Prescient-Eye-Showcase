@@ -67,67 +67,61 @@ const About = () => {
 
   return (
 
-    <div className='flex flex-col w-full p-24 h-screen'>
+    <div className='flex flex-col xl:flex-row w-full p-24 pt-4 h-screen'>
 
+      <motion.div className="relative flex flex-col w-1/2 space-y-10 items-center justify-cente">
 
-        <div className='flex w-full h-screen space-x-6'>
-            <div className='w-1/2 flex flex-col space-y-12'>
-
-                <motion.div className="relative flex flex-col items-center justify-center h-full">
-
-                  <div className='flex items-center px-24 pb-12 pt-24 text-5xl font-bold tracking-widest'>
-                    Icarus Engineering
-                  </div>
-
-                  <motion.img
-                      key={currentImage}
-                      src={images[currentImage]}
-                      alt="slider"
-                      className="object-fit rounded-full slider-img  border-4 border-black dark:border-white h-[75%] w-[75%] mb-8"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 1 }}
-                  />
-
-                    <div className="absolute h-full flex w-[75%] items-center justify-between p-4 mt-32">
-                        <button
-                            onClick={prevImage}
-                            className="z-10"
-                        >
-                            <svg viewBox="-2 0 12 12" id="meteor-icon-kit__solid-chevron-left-xs" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path fillRule="evenodd" clipRule="evenodd" d="M7.0607 9.0393C7.6464 9.6251 7.6464 10.5749 7.0607 11.1607C6.4749 11.7464 5.5251 11.7464 4.9393 11.1607L0.93934 7.1607C0.35355 6.5749 0.35355 5.6251 0.93934 5.0393L4.9393 1.03934C5.5251 0.45355 6.4749 0.45355 7.0607 1.03934C7.6464 1.62513 7.6464 2.57487 7.0607 3.16066L4.1213 6.1L7.0607 9.0393z" fill="#758CA3"></path></g></svg>
-
-                        </button>
-                        <button
-                            onClick={nextImage}
-                            className="z-10"
-                        > 
-                            <svg viewBox="-2 0 12 12" id="meteor-icon-kit__solid-chevron-right-xs" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path fillRule="evenodd" clipRule="evenodd" d="M0.93934 9.0393L3.8787 6.1L0.93934 3.16066C0.35355 2.57487 0.35355 1.62513 0.93934 1.03934C1.52513 0.45355 2.4749 0.45355 3.0607 1.03934L7.0607 5.0393C7.6464 5.6251 7.6464 6.5749 7.0607 7.1607L3.0607 11.1607C2.4749 11.7464 1.52513 11.7464 0.93934 11.1607C0.35355 10.5749 0.35355 9.6251 0.93934 9.0393z" fill="#758CA3"></path></g></svg>
-                            
-                        </button>
-                    </div>
-
-                    <div className="bottom-0 w-full flex justify-center mt- mb-4">
-                    {images.map((_, index) => (
-                        <div
-                        key={index}
-                        className={`w-2 h-2 rounded-full mx-2 cursor-pointer ${
-                            currentImage === index ? "bg-white" : "bg-gray-500"
-                        }`}
-                        onClick={() => setCurrentImage(index)}
-                        ></div>
-                    ))}
-                    </div>
-                    
-                </motion.div>
-
-            </div>
-
-            <div className='w-1/2 flex items-center justify-center'>
-            <div className='w-full flex items-center justify-center text-center h-1/2 text-5xl'>
-                {descs[currentImage].substring(0, currentChar)}
-            </div>
-            </div>
+        <div className='flex items-center px-24 pb-12 text-5xl font-bold tracking-widest'>
+          Icarus Engineering
         </div>
+
+        <motion.img
+          key={currentImage}
+          src={images[currentImage]}
+          alt="slider"
+          className="object-fit rounded-full border-4 border-black dark:border-white h-[70%] w-[75%] mb-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        />
+
+          <div className="absolute h-[90%] flex w-[75%] items-center justify-between p-4">
+              <button
+                  onClick={prevImage}
+                  className="z-10"
+              >
+                  <svg viewBox="-2 0 12 12" id="meteor-icon-kit__solid-chevron-left-xs" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path fillRule="evenodd" clipRule="evenodd" d="M7.0607 9.0393C7.6464 9.6251 7.6464 10.5749 7.0607 11.1607C6.4749 11.7464 5.5251 11.7464 4.9393 11.1607L0.93934 7.1607C0.35355 6.5749 0.35355 5.6251 0.93934 5.0393L4.9393 1.03934C5.5251 0.45355 6.4749 0.45355 7.0607 1.03934C7.6464 1.62513 7.6464 2.57487 7.0607 3.16066L4.1213 6.1L7.0607 9.0393z" fill="#758CA3"></path></g></svg>
+
+              </button>
+              <button
+                  onClick={nextImage}
+                  className="z-10"
+              > 
+                  <svg viewBox="-2 0 12 12" id="meteor-icon-kit__solid-chevron-right-xs" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path fillRule="evenodd" clipRule="evenodd" d="M0.93934 9.0393L3.8787 6.1L0.93934 3.16066C0.35355 2.57487 0.35355 1.62513 0.93934 1.03934C1.52513 0.45355 2.4749 0.45355 3.0607 1.03934L7.0607 5.0393C7.6464 5.6251 7.6464 6.5749 7.0607 7.1607L3.0607 11.1607C2.4749 11.7464 1.52513 11.7464 0.93934 11.1607C0.35355 10.5749 0.35355 9.6251 0.93934 9.0393z" fill="#758CA3"></path></g></svg>
+                  
+              </button>
+          </div>
+
+          <div className="bottom-0 w-full flex justify-center mb-4">
+          {images.map((_, index) => (
+              <div
+              key={index}
+              className={`w-2 h-2 rounded-full mx-2 cursor-pointer ${
+                  currentImage === index ? "bg-white" : "bg-gray-500"
+              }`}
+              onClick={() => setCurrentImage(index)}
+              ></div>
+          ))}
+          </div>
+          
+      </motion.div>
+
+      <div className='w-1/2 flex items-center justify-center h-[80%]'>
+      <div className='w-full flex items-center justify-center text-center h-1/2 text-5xl'>
+          {descs[currentImage].substring(0, currentChar)}
+      </div>
+      </div>
+
     </div>
         
   )

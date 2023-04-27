@@ -11,7 +11,7 @@ function App() {
 
       <Header />
 
-      <section id='home' className='border-b border-black dark:border-white pb-24 pt-24'>
+      <section id='home' className='border-b border-black dark:border-white'>
         <div className="relative bg-cover bg-center">
           <div className="absolute inset-0 mt-[5%] hidden md:flex justify-center z-0 text-[300px] font-semibold opacity-10 text-black dark:text-white">
             <img className='rounded-full' src={logo} alt='' />
@@ -22,15 +22,18 @@ function App() {
         </div>
       </section>
 
-      <section id='diagnose' className='border-b border-black dark:border-white pb-24 pt-8'>
+      <section id='diagnose' className='border-b border-black dark:border-white'>
+        <Header />
         <Diagnose />
       </section>
 
-      <section id='features' className='border-b border-black dark:border-white pb-24 pt-20'>
+      <section id='features' className='border-b border-black dark:border-white'>
+        <Header />
         <Features />
       </section>
 
-      <section id='about' className='border-b border-black dark:border-white pb-24'>
+      <section id='about' className='border-b border-black dark:border-white'>
+        <Header />
         <About />
       </section>
 
