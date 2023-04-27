@@ -15,18 +15,22 @@ const MyChart = () => {
     }
 
     const interval = setInterval(() => {
-      setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
+      if (document.querySelector('#chart-video').currentTime > 1 && (!document.querySelector('#chart-video').paused)) {
+        
+        setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
+  
+        setSeriesData((prevSeriesData) => {
+          const newSeriesData = [...prevSeriesData];
+          newSeriesData[newSeriesData.length - 1] += Math.random() / 10;
+          return newSeriesData;
+        });
+  
+        setAreaData((prevAreaData) => {
+          const newAreaData = [...prevAreaData.slice(1), null];
+          return newAreaData;
+        });
 
-      setSeriesData((prevSeriesData) => {
-        const newSeriesData = [...prevSeriesData];
-        newSeriesData[newSeriesData.length - 1] += Math.random() / 10;
-        return newSeriesData;
-      });
-
-      setAreaData((prevAreaData) => {
-        const newAreaData = [...prevAreaData.slice(1), null];
-        return newAreaData;
-      });
+      }
     }, 3000);
 
     return () => clearInterval(interval);

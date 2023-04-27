@@ -47,7 +47,7 @@ const Diagnose = () => {
       <div className='flex flex-col w-full xl:w-[40%] items-center justify-center h-full space-y-12'>
 
         <div className='rounded-2xl overflow-hidden'>
-            <video controls autoPlay muted key={vidSrc[0]}>
+            <video id='chart-video' controls autoPlay muted key={vidSrc[0]}>
               <source src={vidSrc[0]} type="video/mp4" />
             </video>
         </div>
