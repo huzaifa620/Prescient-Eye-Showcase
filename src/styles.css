@@ -31,7 +31,7 @@ ul.cam {
   display: flex;
   list-style: none;
   height: 400px;
-  width: auto;
+  width: 94%;
   overflow-x: scroll;
   padding: 20px 0;
   flex: 0 0 80%;
@@ -60,7 +60,6 @@ li.cam {
 @media (max-width: 480px) {
   li.cam {
     flex: 0 0 200px;
-    background: var(--accent);
     margin: 0 20px 0 0;
   } 
 }
@@ -68,11 +67,3 @@ li.cam {
 li.cam:last-of-type {
   margin: 0;
 }
-
-/* .slick-arrow.slick-prev {
-  position: absolute !important;
-}
-
-.slick-list {
-  position: relative !important;
-} */
