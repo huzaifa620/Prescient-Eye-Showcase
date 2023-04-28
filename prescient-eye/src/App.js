@@ -15,7 +15,7 @@ function App() {
             <img className='rounded-full' src={logo} alt='' />
           </div>
           <div className="relative z-10">
-            <Header />
+            <Header section={[1,0,0,0]} />
             <Home />
           </div>
         </div>
@@ -27,7 +27,7 @@ function App() {
             <img className='rounded-full' src={logo} alt='' />
           </div>
           <div className="relative z-10">
-            <Header />
+            <Header section={[0,0,0,1]} />
             <Diagnose />
           </div>
         </div>
@@ -39,7 +39,7 @@ function App() {
             <img className='rounded-full' src={logo} alt='' />
           </div>
           <div className="relative z-10">
-            <Header />
+            <Header section={[0,0,1,0]} />
             <Features />
           </div>
         </div>
@@ -51,7 +51,7 @@ function App() {
               <img className='rounded-full' src={logo} alt='' />
             </div>
             <div className="relative z-10">
-              <Header />
+              <Header section={[0,1,0,0]} />
               <About />
           </div>
         </div>
