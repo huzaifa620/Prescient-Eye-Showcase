@@ -36,7 +36,7 @@ const About = () => {
 
   useEffect(() => {
     // Set initial opacity to 0
-    const image = document.querySelector("#about");
+    const image = document.querySelector("#about-img");
     image.style.opacity = 0;
   
     // Animate opacity to 1
@@ -74,8 +74,7 @@ const About = () => {
         </div>
 
         <motion.img
-          id='about'
-          key={currentImage}
+          id='about-img'
           src={images[currentImage]}
           alt="slider"
           className="object-fit rounded-full border-4 border-black dark:border-white h-[280px] w-[280px] md:w-[500px] md:h-[500px] xl:h-[75%] xl:w-[75%] 2xl:w-[80%] 2xl:h-[80%] mb-8"
