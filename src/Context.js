@@ -13,10 +13,8 @@ const ThemeProvider = ({ children }) => {
     setIsDark(!isDark);
   };
 
-  const [openMenu, setOpenMenu] = useState(false);
-
   return (
-    <ThemeContext.Provider value={{ isDark, toggleTheme, openMenu, setOpenMenu }}>
+    <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
