@@ -16,7 +16,7 @@ const Diagnose = () => {
 
       <div className='w-full xl:w-[30%] flex flex-col items-center justify-center space-y-12 h-screen xl:h-[90%]'>
 
-        <img className='h-48 object-contain md:object-cover rounded-3xl' src='https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org' alt='' />
+        <img className='h-48 object-contain md:object-cover rounded-3xl z-10' src='https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1651173337105.jpg-org' alt='' />
 
         <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full flex flex-col rounded-3xl shadow-2xl overflow-y-auto h-1/2 scrollbar-thin scrollbar-track-teal-800/30 dark:scrollbar-track-[#fff3] scrollbar-thumb-[#141414] dark:scrollbar-thumb-[#f1f3f2]'>
 
