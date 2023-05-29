@@ -65,11 +65,11 @@ const About = () => {
 
   return (
 
-    <div className='flex flex-col xl:flex-row w-full p-2 xl:p-24 xl:pt-4 xl:h-[90vh]'>
+    <div className='flex flex-col xl:flex-row w-full p-2 xl:p-8 xl:h-[90vh]'>
 
       <motion.div className="relative flex flex-col w-full xl:w-1/2 xl:space-y-10 items-center">
 
-        <div className='flex items-center px-24 pb-12 text-2xl  lg:text-3xl xl:text-5xl font-bold tracking-widest text-center lg:text-left'>
+        <div className='flex items-center text-2xl lg:text-3xl xl:text-5xl font-bold tracking-widest text-center lg:text-left'>
           Icarus Engineering
         </div>
 
