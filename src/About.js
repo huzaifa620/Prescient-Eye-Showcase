@@ -69,7 +69,7 @@ const About = () => {
 
       <motion.div className="relative flex flex-col w-full xl:w-1/2 xl:space-y-10 items-center">
 
-        <div className='flex items-center text-2xl lg:text-3xl xl:text-5xl font-bold tracking-widest text-center lg:text-left'>
+        <div className='flex items-center text-2xl lg:text-3xl pb-12 xl:text-5xl font-bold tracking-widest text-center lg:text-left'>
           Icarus Engineering
         </div>
 
