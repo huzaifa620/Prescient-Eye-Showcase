@@ -73,7 +73,7 @@ const Features = () => {
 
           <p className='text-2xl xl:text-3xl 2xl:text-5xl'>Prescient Eye System is capable of integration of following features:</p>
 
-          <h1 id='title' className='text-xl xl:text-2xl 2xl:text-4xl tracking-widest font-bold uppercase text-center xl:text-left'>
+          <h1 id='title' className='text-xl xl:text-2xl 2xl:text-4xl tracking-wides font-bold uppercase text-center xl:text-left'>
             {titles[currentImage]}
           </h1>
 
