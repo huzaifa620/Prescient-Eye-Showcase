@@ -71,9 +71,9 @@ const Features = () => {
     <div className='flex flex-col xl:flex-row w-full xl:space-x-6 p-2 md:p-8 xl:py-6 xl:px-16 md:h-screen mt-4 xl:mt-0 items-center xl:items-stretch'>
         <div className='w-full md:w-3/4 flex flex-col space-y-6 2xl:space-y-12 h-[75%]'>
 
-          <p className='text-2xl xl:text-5xl'>Prescient Eye System is capable of integration of following features:</p>
+          <p className='text-2xl xl:text-3xl 2xl:text-5xl'>Prescient Eye System is capable of integration of following features:</p>
 
-          <h1 id='title' className='text-xl xl:text-4xl tracking-widest font-bold uppercase text-center xl:text-left'>
+          <h1 id='title' className='text-xl xl:text-2xl 2xl:text-4xl tracking-widest font-bold uppercase text-center xl:text-left'>
             {titles[currentImage]}
           </h1>
 
