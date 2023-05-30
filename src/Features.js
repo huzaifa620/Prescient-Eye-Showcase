@@ -68,7 +68,7 @@ const Features = () => {
   }, [currentImage]);
 
   return (
-    <div className='flex flex-col xl:flex-row w-full xl:space-x-6 p-2 xl:py-6 xl:px-16 xl:h-screen mt-8 md:mt-24 xl:mt-0 items-center xl:items-stretch'>
+    <div className='flex flex-col xl:flex-row w-full xl:space-x-6 p-2 md:p-8 xl:py-6 xl:px-16 xl:h-screen mt-4 xl:mt-0 items-center xl:items-stretch'>
         <div className='w-full md:w-3/4 flex flex-col space-y-6 2xl:space-y-12 h-[75%]'>
 
           <p className='text-2xl 2xl:text-5xl'>Prescient Eye System is capable of integration of following features:</p>
@@ -83,7 +83,7 @@ const Features = () => {
               key={currentImage}
               src={images[currentImage]}
               alt="slider"
-              className="w-full object-fit rounded-3xl slider-img border-4 border-black dark:border-white h-[250px] md:h-[300px] xl:h-[500px] 2xl:h-[600px] mb-8"
+              className="w-full object-fit rounded-3xl slider-img border-4 border-black dark:border-white h-[250px] md:h-[300px] lg:h-[400px] xl:h-[350px] 2xl:h-[550px] mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
