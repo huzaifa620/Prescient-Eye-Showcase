@@ -59,9 +59,9 @@ const Home = () => {
 
     return (
         <div className='flex flex-col pb-12'>
-            <div className='w-full h-fit flex flex-col xl:flex-row items-center xl:space-x-6 py-6 px-[2%] xl:px-[5%]'>
+            <div className='w-full h-fit flex flex-col xl:flex-row items-center justify-between xl:space-x-6 py-6 px-[2%] xl:px-[5%]'>
 
-                <div className='w-full xl:w-1/2 h-fit flex flex-col items-center space-y-2'>
+                <div className='w-full xl:w-[45%] 2xl:w-1/2 h-fit flex flex-col items-center space-y-2'>
                     <div className='rounded-2xl overflow-hidden'>
                         <video ref={videoRef} autoPlay muted key={vidSrc[0]}>
                             <source src={vidSrc[0]} type="video/mp4" />
@@ -72,7 +72,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col xl:flex-row items-center justify-center w-full xl:w-1/2 h-fit rounded-2xl p-4 space-y-4'>
+                <div className='flex flex-col xl:flex-row items-center justify-center w-full xl:w-[45%] 2xl:w-1/2 h-fit rounded-2xl p-4 space-y-4'>
                     
                     { name ? 
                         <motion.img initial={{ opacity: 0 }}
@@ -86,7 +86,7 @@ const Home = () => {
                         <img src={img} alt='' className='h-44 md:h-80 w-full md:w-80 object-contain md:object-cover rounded-3xl xl:rounded-none xl:rounded-l-3xl' />
                     }
 
-                    <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full xl:max-w-[60%] xl:min-w-[60%] h-fit xl:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
+                    <div className='dark:text-[#f1f3f2] text-[#141414] p-4 w-full xl:max-w-[65%] xl:min-w-[65%] 2xl:max-w-[60%] 2xl:min-w-[60%] h-fit xl:h-[65%] flex flex-col justify-center rounded-3xl shadow-2xl'>
                         <div className='flex flex-col border-b border-[#141414] dark:border-[#f1f3f2] py-4'>
                             <h1 className='text-2xl font-bold tracking-widest'> {name ? <Typewriter text={name} delay={200} /> : "-" } </h1>
                             <p className='text-base'>Age: {age ? <Typewriter text={age} delay={500} /> : "-" }</p>
