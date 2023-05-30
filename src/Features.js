@@ -68,28 +68,28 @@ const Features = () => {
   }, [currentImage]);
 
   return (
-    <div className='flex flex-col xl:flex-row w-full xl:space-x-6 p-2 md:p-8 xl:py-6 xl:px-16 xl:h-screen mt-4 xl:mt-0 items-center xl:items-stretch'>
+    <div className='flex flex-col xl:flex-row w-full xl:space-x-6 p-2 md:p-8 xl:py-6 xl:px-16 md:h-screen mt-4 xl:mt-0 items-center xl:items-stretch'>
         <div className='w-full md:w-3/4 flex flex-col space-y-6 2xl:space-y-12 h-[75%]'>
 
-          <p className='text-2xl 2xl:text-5xl'>Prescient Eye System is capable of integration of following features:</p>
+          <p className='text-2xl xl:text-5xl'>Prescient Eye System is capable of integration of following features:</p>
 
-          <h1 id='title' className='text-xl xl:text-3xl 2xl:text-4xl tracking-wider font-bold uppercase text-center xl:text-left'>
+          <h1 id='title' className='text-xl xl:text-4xl tracking-widest font-bold uppercase text-center xl:text-left'>
             {titles[currentImage]}
           </h1>
 
-          <motion.div className="relative flex flex-col">
+          <motion.div className="relative flex flex-col h-[80%]">
 
             <motion.img
               key={currentImage}
               src={images[currentImage]}
               alt="slider"
-              className="w-full object-fit rounded-3xl slider-img border-4 border-black dark:border-white h-[250px] md:h-[300px] lg:h-[400px] xl:h-[350px] 2xl:h-[550px] mb-8"
+              className="w-full object-fit h-[100%] rounded-3xl slider-img border-4 border-black dark:border-white mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             />
 
-            <div className="absolute h-full flex w-full items-center justify-between p-4 -mt-8">
+            <div className="absolute h-full flex w-full items-center justify-between p-4">
               <button
                 onClick={prevImage}
                 className="z-10"
@@ -106,7 +106,7 @@ const Features = () => {
               </button>
             </div>
 
-            <div className="bottom-0 w-full flex justify-center mt- mb-4">
+            <div className="bottom-0 w-full flex justify-center mb-4">
               {images.map((_, index) => (
                 <div
                   key={index}
@@ -122,14 +122,7 @@ const Features = () => {
 
         </div>
 
-        <div className='w-full xl:w-1/2 flex flex-col items-center justify-center'>
-            
-          <p className='text-2xl 2xl:text-5xl text-transparent'>:</p>
-
-          <h1 className='text-transparent text-xl xl:text-3xl 2xl:text-4xl tracking-wider font-bold uppercase text-center xl:text-left'>
-            -
-          </h1>
-
+        <div className='w-full xl:w-1/2 flex items-center justify-center'>
           <div className='w-full flex items-center justify-center text-center h-1/2 text-xl xl:text-5xl'>
             {descs[currentImage].substring(0, currentChar)}
           </div>
