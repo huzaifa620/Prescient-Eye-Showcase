@@ -77,13 +77,13 @@ const About = () => {
           id='about-img'
           src={images[currentImage]}
           alt="slider"
-          className="object-fit rounded-full border-4 border-black dark:border-white h-[280px] w-[280px] md:w-[500px] md:h-[500px] xl:h-[75%] xl:w-[70%] 2xl:w-[80%] 2xl:h-[80%] mb-8"
+          className="object-fit rounded-full border-4 border-black dark:border-white h-[280px] w-[280px] md:w-[500px] md:h-[500px] xl:h-[75%] xl:w-[70%] 2xl:w-[65%] 2xl:h-[80%] mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         />
 
-          <div className="absolute h-[112%] md:h-[102.5%] lg:h-[103.5%] xl:h-[102%] flex w-[85%] md:w-[70%] lg:w-[50%] xl:w-[70%] items-center justify-between p-4">
+          <div className="absolute h-[112%] md:h-[102.5%] lg:h-[103.5%] xl:h-[102%] flex w-[85%] md:w-[70%] lg:w-[50%] xl:w-[70%] 2xl:w-[65%] items-center justify-between p-4">
               <button
                   onClick={prevImage}
                   className="z-10"

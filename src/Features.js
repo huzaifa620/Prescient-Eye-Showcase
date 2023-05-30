@@ -68,7 +68,7 @@ const Features = () => {
   }, [currentImage]);
 
   return (
-    <div className='flex flex-col xl:flex-row w-full xl:space-x-6 p-2 xl:p-12 2xl:p-24 xl:h-screen mt-8 md:mt-24 xl:mt-0 items-center xl:items-stretch'>
+    <div className='flex flex-col xl:flex-row w-full xl:space-x-6 p-2 xl:py-6 xl:px-16 xl:h-screen mt-8 md:mt-24 xl:mt-0 items-center xl:items-stretch'>
         <div className='w-full md:w-3/4 flex flex-col space-y-6 2xl:space-y-12 h-[75%]'>
 
           <p className='text-2xl 2xl:text-5xl'>Prescient Eye System is capable of integration of following features:</p>
