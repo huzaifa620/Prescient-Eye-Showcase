@@ -7,6 +7,7 @@ import { ThemeContext } from './Context';
 const Header = ({section}) => {
 
   const { isDark, toggleTheme } = useContext(ThemeContext)
+  
   const fillColor = isDark ? 'white' : 'black'
   const strokeColor = isDark ? 'black' : 'white'
   const [openMenu, setOpenMenu] = useState(false);
