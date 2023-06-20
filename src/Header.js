@@ -53,10 +53,6 @@ const Header = ({section}) => {
             Features
           </a>
 
-          <a href="#about" className={section[1] === 1 ? "opacity-100" : "opacity-40"}>
-            About
-          </a>
-
         </motion.div>
 
         <motion.div initial={{ y: -100, opacity: 0, scale: 0.5 }} animate={{ y: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row items-center space-x-4 w-full md:w-[215px] h-full'>
@@ -64,11 +60,7 @@ const Header = ({section}) => {
           <div className='text-lg font-bold text-black dark:text-white'>Prescient Eye</div>
         </motion.div>
 
-        <motion.div initial={{ x: 500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row-reverse md:flex-row items-center text-[#141414] dark:text-[#f1f3f2] cursor-pointer space-x-4 w-[215px] h-full'>
-
-          <p className='hidden md:flex space-x-1 mt-[10%] items-center bg-transparent px-3 py-1 rounded-3xl text-lg'>
-            Icarus Enginnering
-          </p>
+        <motion.div initial={{ x: 500, opacity: 0, scale: 0.5 }} animate={{ x: 0, opacity: 1, scale: 1 }} transition={{ duration: 1.5 }} className='flex flex-row-reverse md:flex-row items-center text-[#141414] dark:text-[#f1f3f2] cursor-pointer md:justify-end space-x-4 w-[215px] h-full'>
 
           {!openMenu ? (<svg onClick={() => {setOpenMenu(!openMenu)}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 flex md:hidden">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
@@ -97,9 +89,6 @@ const Header = ({section}) => {
             Features
           </a>
 
-          <a href="#about" onClick={() => setOpenMenu(false)} className={section[1] === 1 ? 'border border-[#f1f3f2] dark:border-[#141414] w-1/3 text-center p-1' : "opacity-50"}>
-            About
-          </a>
         </div>
 
       )}
