@@ -11,7 +11,7 @@ const content = [
     {"title": "Suspected Car Detection", "image": cars, "desc": "Offline processing capabilities for data securities."},
     {"title": "Autonomous Number Plate Detection", "image": car, "desc": "Encrypted transmission of data from CCTV to Central Server and analysis system."},
     {"title": "Unattended Vehicle Identification", "image": openWorld, "desc": "Complete edge capabilities over data protection and threat analysis."},
-    {"title": "Robber and Arms Detection", "image": robbery, "desc": "Unsupervised learning automation model for continous training and processing."},
+    {"title": "Robber and Arms Detection", "image": robbery, "desc": "Unsupervised learning automation model for continuous training and processing."},
     {"title": "Suspected Weapon Identification", "image": pistol, "desc": "99% accuracy in terms of anomaly detection."},
     {"title": "3D Face Regeneration", "image": faces, "desc": "Vision based analytics."} 
 ]
