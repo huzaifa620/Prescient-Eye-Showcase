@@ -38,7 +38,7 @@ const Diagnose = () => {
 
               A native of Kech district in Balochistan, Shari was a primary school teacher. Having completed her B.Ed in 2014 and M.Ed in 2018, she completed her masters in zoology from the University of Balochistan and an MPhil from the llama Iqbal Open University.
 
-              Her father served as a director in a government agency and was also a member of the district council for three years. Baloch's husband is a dentist while her brother-in-law a lecturer. One of her uncles is an author, a former professor and human rights campaigner, PTI reported. </p>
+              Her father served as a director in a government agency and was also a member of the district council for three years. Baloch's husband is a dentist while her brother-in-law a lecturer. One of her uncles is an author, a former professor and human rights campaigner. </p>
           </div>
         </div>
 
