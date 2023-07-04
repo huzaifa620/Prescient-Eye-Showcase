@@ -5,7 +5,7 @@ import { ThemeContext } from './Context';
 const MyChart = () => {
   const { isDark, toggleTheme } = useContext(ThemeContext)
 
-  const [seriesData, setSeriesData] = useState([0.9, 0.9, 0.9, 0.9]);
+  const [seriesData, setSeriesData] = useState([0.2, 0.7, 0.5, 0.9, 0.7, 0.5, 0.6, 0.6]);
   const [areaData, setAreaData] = useState([null, null, null, null, 1, 1, 1, null]);
   const [elapsedTime, setElapsedTime] = useState(0);
 
@@ -20,8 +20,10 @@ const MyChart = () => {
         setElapsedTime((prevElapsedTime) => prevElapsedTime + 1);
   
         setSeriesData((prevSeriesData) => {
-          const newSeriesData = [...prevSeriesData];
-          newSeriesData[newSeriesData.length - 1] += Math.random() / 10;
+          const newSeriesData = prevSeriesData.map((value) => {
+            const randomSign = Math.random() < 0.5 ? -1 : 1;
+            return value + randomSign * 0.05;
+          });
           return newSeriesData;
         });
   
@@ -73,7 +75,8 @@ const MyChart = () => {
       {
         name: '',
         type: 'line',
-        data: seriesData
+        data: seriesData,
+        color: '#FF0000'
       },
       {
         name: '',
